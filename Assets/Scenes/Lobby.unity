@@ -2986,16 +2986,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99b94e9ec5bb4124e9f4fa96188fde74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settingsPanel: {fileID: 233305306}
+  nameInput: {fileID: 1350133032}
   playerButtons:
   - {fileID: 1937815653}
   - {fileID: 1510441313}
   - {fileID: 595606398}
   - {fileID: 1673071808}
   - {fileID: 575233851}
-  settingsPanel: {fileID: 233305306}
-  nameInput: {fileID: 1350133032}
-  colorPreview: {fileID: 436602490}
   colorDropdown: {fileID: 1599476631}
+  colorPreview: {fileID: 436602490}
+  playerMarker: {fileID: 0}
+  politicalCompass: {fileID: 0}
+  playerIDText: {fileID: 0}
+  playerPerksText: {fileID: 0}
+  politicalPositionText: {fileID: 0}
+  liberalsBar: {fileID: 0}
+  conservativesBar: {fileID: 0}
+  libertariansBar: {fileID: 0}
+  authoritariansBar: {fileID: 0}
 --- !u!1 &1839774780
 GameObject:
   m_ObjectHideFlags: 0
