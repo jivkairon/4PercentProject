@@ -48,11 +48,18 @@ public class RegionData : MonoBehaviour
     }
 
     // Влияние на действие според брой мандати
+    public bool isCity; // Маркирайте големите градове в Inspector
+
     public float GetActionInfluence(ActionData action)
     {
-        return action.baseInfluence * (mandates / 240f); 
+        float baseValue = action.baseInfluence * (mandates / 240f);
+        return isCity ? baseValue * 0.7f : baseValue * 1.3f; // Градовете са по-сложни
     }
-
+    /*  public float GetActionInfluence(ActionData action)
+      {
+          return action.baseInfluence * (mandates / 240f); 
+      }
+    */
     // Изчисляване на влияние върху регион като процент от мандати на регион
     public float GetPlayerInfluencePercentage()
     {

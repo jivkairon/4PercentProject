@@ -3,7 +3,8 @@ using TMPro;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
-{ 
+{
+    public static Player Instance;
     public float budget = 1000f; // Бюджет на играча
     public float overallInfluence = 0f; // Влияние на играча
     public TextMeshProUGUI budgetText; // Текст на бюджета

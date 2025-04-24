@@ -86,4 +86,5 @@ public class Bot : MonoBehaviour
             UpdateOverallInfluenceDisplay(); // Ъпдейт на текста за влияние
         }
     }
+
 }
