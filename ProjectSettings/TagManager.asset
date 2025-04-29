@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bot
   - Region
+  - ActionPanel
   layers:
   - Default
   - TransparentFX

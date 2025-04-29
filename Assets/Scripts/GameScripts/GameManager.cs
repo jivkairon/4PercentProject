@@ -46,13 +46,13 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject); // Предотвратява дублиране
         }
     }
-    private void StartPlayerTurn()
+    public void StartPlayerTurn()
     {
         isPlayerTurn = true;
         Debug.Log("Ред на играча! Избери област.");
     }
 
-    private void StartBotTurn()
+   public void StartBotTurn()
     {
         isPlayerTurn = false;
         StartCoroutine(BotTakesTurnAfterDelay());
