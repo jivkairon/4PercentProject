@@ -18,7 +18,7 @@ public class EventSystem : MonoBehaviour
 
 
     public Player player;
-    public BotController bot;
+    public Bot bot;
 
     public void TriggerScandalEvent()
     {

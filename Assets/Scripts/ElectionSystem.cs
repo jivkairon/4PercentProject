@@ -9,7 +9,7 @@ public class ElectionSystem : MonoBehaviour
     [Header("References")]
     public RegionData[] allRegions;
     public Player player;
-    public BotController bot;
+    public Bot bot;
 
     [Header("Settings")]
     public int totalMandates = 240;  // Общ брой мандати

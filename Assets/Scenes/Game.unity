@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dobrich
       objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 1cc270af09c7544478fe12e7fb8f5813, type: 3}
+      propertyPath: m_TagString
+      value: Region
+      objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 1cc270af09c7544478fe12e7fb8f5813, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -317,6 +321,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Razgrad
       objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 4d8dcee140d5c364b80de9f89cbbbc8d, type: 3}
+      propertyPath: m_TagString
+      value: Region
+      objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 4d8dcee140d5c364b80de9f89cbbbc8d, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -390,6 +398,10 @@ PrefabInstance:
     - target: {fileID: -3888481672020999207, guid: 91e4bbd374d75134f99b58d3f7d0cf76, type: 3}
       propertyPath: m_Name
       value: Shumen
+      objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 91e4bbd374d75134f99b58d3f7d0cf76, type: 3}
+      propertyPath: m_TagString
+      value: Region
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 91e4bbd374d75134f99b58d3f7d0cf76, type: 3}
       propertyPath: m_RootOrder
@@ -552,8 +564,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2102425013}
   - {fileID: 1230816531}
+  - {fileID: 2102425013}
   - {fileID: 2087322292}
   - {fileID: 2075881661}
   - {fileID: 1731255484}
@@ -589,6 +601,10 @@ PrefabInstance:
     - target: {fileID: -3888481672020999207, guid: 09225a8b4689e504d8057e8265799011, type: 3}
       propertyPath: m_Name
       value: Varna
+      objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 09225a8b4689e504d8057e8265799011, type: 3}
+      propertyPath: m_TagString
+      value: Region
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 09225a8b4689e504d8057e8265799011, type: 3}
       propertyPath: m_RootOrder
@@ -663,6 +679,10 @@ PrefabInstance:
     - target: {fileID: -3888481672020999207, guid: 28ce98635b6fad744bb344912b239d1f, type: 3}
       propertyPath: m_Name
       value: Plovdiv1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 28ce98635b6fad744bb344912b239d1f, type: 3}
+      propertyPath: m_TagString
+      value: Region
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 28ce98635b6fad744bb344912b239d1f, type: 3}
       propertyPath: m_RootOrder
@@ -1394,6 +1414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Montana
       objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 63181d72561d7ae45af79cd270110f85, type: 3}
+      propertyPath: m_TagString
+      value: Region
+      objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 63181d72561d7ae45af79cd270110f85, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -1663,7 +1687,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &493446297
 GameObject:
@@ -2128,6 +2152,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StaraZagora
       objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 51d24212d67788240b8bb0d651c5e159, type: 3}
+      propertyPath: m_TagString
+      value: Region
+      objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 51d24212d67788240b8bb0d651c5e159, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -2337,6 +2365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sofia23
       objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 88cb0eb2c9806b344b0e0b632e51127f, type: 3}
+      propertyPath: m_TagString
+      value: Region
+      objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 88cb0eb2c9806b344b0e0b632e51127f, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -2511,6 +2543,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kustendil
       objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 99644b4a4b2905740bc1233f79d1216f, type: 3}
+      propertyPath: m_TagString
+      value: Region
+      objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 99644b4a4b2905740bc1233f79d1216f, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -2589,6 +2625,10 @@ PrefabInstance:
     - target: {fileID: -3888481672020999207, guid: 2f672cf5494a2d04da2a422adab038db, type: 3}
       propertyPath: m_Name
       value: Sliven
+      objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 2f672cf5494a2d04da2a422adab038db, type: 3}
+      propertyPath: m_TagString
+      value: Region
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 2f672cf5494a2d04da2a422adab038db, type: 3}
       propertyPath: m_RootOrder
@@ -2782,6 +2822,10 @@ PrefabInstance:
     - target: {fileID: -3888481672020999207, guid: 58a04bcd690461140867fa0a70867901, type: 3}
       propertyPath: m_Name
       value: Vidin
+      objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 58a04bcd690461140867fa0a70867901, type: 3}
+      propertyPath: m_TagString
+      value: Region
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 58a04bcd690461140867fa0a70867901, type: 3}
       propertyPath: m_RootOrder
@@ -3398,6 +3442,10 @@ PrefabInstance:
     - target: {fileID: -3888481672020999207, guid: 6a6899b0cb5fd524695344bceac6e0bc, type: 3}
       propertyPath: m_Name
       value: Lovech
+      objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 6a6899b0cb5fd524695344bceac6e0bc, type: 3}
+      propertyPath: m_TagString
+      value: Region
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 6a6899b0cb5fd524695344bceac6e0bc, type: 3}
       propertyPath: m_RootOrder
@@ -4277,6 +4325,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vraca
       objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 030fa8fbad2eb994d8a108bfb32ad341, type: 3}
+      propertyPath: m_TagString
+      value: Region
+      objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 030fa8fbad2eb994d8a108bfb32ad341, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -4458,6 +4510,10 @@ PrefabInstance:
     - target: {fileID: -3888481672020999207, guid: 9fe99f87641c2d44ba67251c0bc2b649, type: 3}
       propertyPath: m_Name
       value: Ruse
+      objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 9fe99f87641c2d44ba67251c0bc2b649, type: 3}
+      propertyPath: m_TagString
+      value: Region
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 9fe99f87641c2d44ba67251c0bc2b649, type: 3}
       propertyPath: m_RootOrder
@@ -5582,6 +5638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Haskovo
       objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 452c5051aa0da3b4c8b471dbd0a00b0b, type: 3}
+      propertyPath: m_TagString
+      value: Region
+      objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 452c5051aa0da3b4c8b471dbd0a00b0b, type: 3}
       propertyPath: m_RootOrder
       value: 30
@@ -5775,6 +5835,10 @@ PrefabInstance:
     - target: {fileID: -3888481672020999207, guid: 01c8041b40c7c3c488b1e0a89d2b564a, type: 3}
       propertyPath: m_Name
       value: Pazarjik
+      objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 01c8041b40c7c3c488b1e0a89d2b564a, type: 3}
+      propertyPath: m_TagString
+      value: Region
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 01c8041b40c7c3c488b1e0a89d2b564a, type: 3}
       propertyPath: m_RootOrder
@@ -5976,7 +6040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1037669711}
-  bot: {fileID: 1337977812}
+  bot: {fileID: 0}
 --- !u!4 &1191760958
 Transform:
   m_ObjectHideFlags: 0
@@ -5990,7 +6054,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1200958072
 GameObject:
@@ -6246,7 +6310,7 @@ RectTransform:
   - {fileID: 1200958073}
   - {fileID: 1998517582}
   m_Father: {fileID: 120317494}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6303,6 +6367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 422950368435b8544b5a9c0b8f2862a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startHidden: 1
   categoryDropdown: {fileID: 2130448834}
   actionDropdown: {fileID: 1590130899}
   actionDescriptionText: {fileID: 1200958074}
@@ -6902,6 +6967,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turnovo
       objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: f87822e31b543f24fb9969e631a62213, type: 3}
+      propertyPath: m_TagString
+      value: Region
+      objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: f87822e31b543f24fb9969e631a62213, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -7259,6 +7328,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pleven
       objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: c6740cb6fee3af1419fe00dd7e663e7c, type: 3}
+      propertyPath: m_TagString
+      value: Region
+      objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: c6740cb6fee3af1419fe00dd7e663e7c, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -7444,6 +7517,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sofia
       objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 94aed30dfab9d33498ca96b14f22ecfc, type: 3}
+      propertyPath: m_TagString
+      value: Region
+      objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 94aed30dfab9d33498ca96b14f22ecfc, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -7595,7 +7672,7 @@ GameObject:
   - component: {fileID: 1337977812}
   m_Layer: 0
   m_Name: Bot
-  m_TagString: Untagged
+  m_TagString: Bot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7613,7 +7690,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1337977812
 MonoBehaviour:
@@ -7627,9 +7704,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328c3ff82e7be9c4db84935029e975de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  botMoney: 5000
-  botDecisionDelay: 2
+  budget: 1000
+  overallInfluence: 0
+  budgetText: {fileID: 1731255485}
+  overallInfluenceText: {fileID: 1657582421}
   botActionText: {fileID: 1089689172}
+  decisionDelay: 2
 --- !u!1 &1347189498
 GameObject:
   m_ObjectHideFlags: 0
@@ -7798,7 +7878,7 @@ MonoBehaviour:
   currentRound: 1
   totalRounds: 10
   player: {fileID: 1037669711}
-  bot: {fileID: 0}
+  bot: {fileID: 1337977812}
   roundCounterText: {fileID: 2087322293}
   gameOverPanel: {fileID: 1564175162}
   gameOverText: {fileID: 1893556772}
@@ -7806,6 +7886,39 @@ MonoBehaviour:
   botMandatesText: {fileID: 1092960917}
   nextRoundButton: {fileID: 2047241427}
   restartButton: {fileID: 1014725531}
+  regions:
+  - {fileID: 973012933}
+  - {fileID: 1100818717}
+  - {fileID: 656561207}
+  - {fileID: 1125965346}
+  - {fileID: 1303815614}
+  - {fileID: 886718590}
+  - {fileID: 496974014}
+  - {fileID: 865580668}
+  - {fileID: 1575259709}
+  - {fileID: 341288820}
+  - {fileID: 944955038}
+  - {fileID: 330278467}
+  - {fileID: 1601360130}
+  - {fileID: 802189111}
+  - {fileID: 1068670100}
+  - {fileID: 402353490}
+  - {fileID: 781965606}
+  - {fileID: 813965011}
+  - {fileID: 774953531}
+  - {fileID: 1096749263}
+  - {fileID: 423684133}
+  - {fileID: 481313605}
+  - {fileID: 1850747421}
+  - {fileID: 2049199230}
+  - {fileID: 1708922171}
+  - {fileID: 2023835252}
+  - {fileID: 2066610606}
+  - {fileID: 829805132}
+  - {fileID: 88278119}
+  - {fileID: 980889360}
+  - {fileID: 598554595}
+  isPlayerTurn: 1
 --- !u!4 &1353287640
 Transform:
   m_ObjectHideFlags: 0
@@ -7835,7 +7948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allRegions: []
   player: {fileID: 1037669711}
-  bot: {fileID: 1337977812}
+  bot: {fileID: 0}
   totalMandates: 240
 --- !u!1 &1362766746
 GameObject:
@@ -8194,6 +8307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: Player
   playerColor: {r: 1, g: 1, b: 1, a: 1}
+  botColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &1461209481
 Transform:
   m_ObjectHideFlags: 0
@@ -8207,7 +8321,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1477858160
 PrefabInstance:
@@ -8219,6 +8333,10 @@ PrefabInstance:
     - target: {fileID: -3888481672020999207, guid: 779aaf98033fb5343b081339be07e5b7, type: 3}
       propertyPath: m_Name
       value: Qmbol
+      objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 779aaf98033fb5343b081339be07e5b7, type: 3}
+      propertyPath: m_TagString
+      value: Region
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 779aaf98033fb5343b081339be07e5b7, type: 3}
       propertyPath: m_RootOrder
@@ -8397,6 +8515,10 @@ PrefabInstance:
     - target: {fileID: -3888481672020999207, guid: 03f097acfdc5eb042987b0e2831b1426, type: 3}
       propertyPath: m_Name
       value: Silistra
+      objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 03f097acfdc5eb042987b0e2831b1426, type: 3}
+      propertyPath: m_TagString
+      value: Region
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 03f097acfdc5eb042987b0e2831b1426, type: 3}
       propertyPath: m_RootOrder
@@ -8582,6 +8704,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kurjali
       objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 3a6a6aa408855ab42a9a14b7d85e94f9, type: 3}
+      propertyPath: m_TagString
+      value: Region
+      objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 3a6a6aa408855ab42a9a14b7d85e94f9, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -8763,6 +8889,10 @@ PrefabInstance:
     - target: {fileID: -3888481672020999207, guid: 52ba5c1970fb300469b36884dd361ddb, type: 3}
       propertyPath: m_Name
       value: Burgas
+      objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 52ba5c1970fb300469b36884dd361ddb, type: 3}
+      propertyPath: m_TagString
+      value: Region
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 52ba5c1970fb300469b36884dd361ddb, type: 3}
       propertyPath: m_RootOrder
@@ -9282,6 +9412,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plovdiv
       objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 9a332a558136d8e45b5d15ed114f90df, type: 3}
+      propertyPath: m_TagString
+      value: Region
+      objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 9a332a558136d8e45b5d15ed114f90df, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -9473,6 +9607,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smolqn
       objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 8a538369fcd27794fbc735071235ef7b, type: 3}
+      propertyPath: m_TagString
+      value: Region
+      objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 8a538369fcd27794fbc735071235ef7b, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -9546,6 +9684,10 @@ PrefabInstance:
     - target: {fileID: -3888481672020999207, guid: f5eca364962c76749ade18a1e7fb79d2, type: 3}
       propertyPath: m_Name
       value: Pernik
+      objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: f5eca364962c76749ade18a1e7fb79d2, type: 3}
+      propertyPath: m_TagString
+      value: Region
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: f5eca364962c76749ade18a1e7fb79d2, type: 3}
       propertyPath: m_RootOrder
@@ -10411,6 +10553,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gabrovo
       objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 6535bffeef1558d48901253a6b85bc76, type: 3}
+      propertyPath: m_TagString
+      value: Region
+      objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 6535bffeef1558d48901253a6b85bc76, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -11030,6 +11176,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sofia25
       objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: a73b2036fb3a8b547b67e51cb5a78231, type: 3}
+      propertyPath: m_TagString
+      value: Region
+      objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: a73b2036fb3a8b547b67e51cb5a78231, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -11239,6 +11389,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turgovishte
       objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: f0732d4a92bc9ef4382d2d3c12968acd, type: 3}
+      propertyPath: m_TagString
+      value: Region
+      objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: f0732d4a92bc9ef4382d2d3c12968acd, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -11422,6 +11576,10 @@ PrefabInstance:
     - target: {fileID: -3888481672020999207, guid: 61de2149a0b828044a233e11a2f3fb52, type: 3}
       propertyPath: m_Name
       value: Blagoevgrad
+      objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 61de2149a0b828044a233e11a2f3fb52, type: 3}
+      propertyPath: m_TagString
+      value: Region
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 61de2149a0b828044a233e11a2f3fb52, type: 3}
       propertyPath: m_RootOrder
@@ -12546,6 +12704,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sofia24
       objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: bac0b1bafe3e6494e87d41ecf6ff88d3, type: 3}
+      propertyPath: m_TagString
+      value: Region
+      objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: bac0b1bafe3e6494e87d41ecf6ff88d3, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -12873,7 +13035,7 @@ Transform:
   m_Children:
   - {fileID: 1362766747}
   m_Father: {fileID: 120317494}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2130448832
 GameObject:

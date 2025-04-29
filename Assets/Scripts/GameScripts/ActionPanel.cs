@@ -2,9 +2,11 @@
 using TMPro;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Collections;
 
 public class ActionPanel : MonoBehaviour
 {
+    [SerializeField] private bool startHidden = true;
     public TMP_Dropdown categoryDropdown; // Списък за категориите
     public TMP_Dropdown actionDropdown;  // Списък за действията
     public TextMeshProUGUI actionDescriptionText; // Описание на действие - текст
@@ -18,25 +20,51 @@ public class ActionPanel : MonoBehaviour
     private Player player; // Играч
     private List<RegionData.ActionData> currentActions = new List<RegionData.ActionData>();
 
+    private bool isInitialized = false;
+    void OnEnable() => Debug.Log("Панелът се активира!");
+    void OnDisable() => Debug.Log("Панелът се деактивира!");
+    private void Awake()
+    {
+        // Задаваме висок priority, за да не бъде деактивиран от други скриптове
+        transform.SetAsLastSibling();
+    }
+
+  
     void Start()
     {
-        player = FindObjectOfType<Player>();
-        // Проверка дали играча е избран
-        if (player == null)
-        {
-            Debug.LogError("Player not found in the scene.");
-        }
+        InitializePanel();
 
-        // Списък - категории
+        if (startHidden) StartCoroutine(DelayedHide());
+    }
+    IEnumerator DelayedHide()
+    {
+        yield return new WaitForEndOfFrame();
+        gameObject.SetActive(false);
+    }
+    public void ShowForRegion(RegionData region)
+    {
+        transform.SetAsLastSibling();
+        UpdateRegionInfo(region);
+        gameObject.SetActive(true);
+    }
+    IEnumerator DelayedEnable()
+    {
+        yield return new WaitForEndOfFrame(); // Изчаква края на кадъра
+        if (!isInitialized)
+        {
+            gameObject.SetActive(true);
+            isInitialized = true;
+        }
+    }
+    void InitializePanel()
+    {
+        player = FindObjectOfType<Player>();
+
         if (categoryDropdown != null)
         {
             categoryDropdown.ClearOptions();
             categoryDropdown.AddOptions(new List<string> { "Политически Кампании", "Социални Инициативи", "Икономически Мерки" });
             categoryDropdown.onValueChanged.AddListener(OnCategorySelected);
-        }
-        else
-        {
-            Debug.LogError("Category Dropdown is not assigned.");
         }
 
         // Списък - действия
@@ -59,11 +87,19 @@ public class ActionPanel : MonoBehaviour
         {
             Debug.LogError("Perform Action Button is not assigned.");
         }
-
-        // Скрит панел в началото
-        gameObject.SetActive(false);
+     
+    }
+    private void UpdateRegionInfo(RegionData region)
+    {
+        selectedRegion = region;
+        regionNameText.text = region.regionName;
+        playerInfluenceText.text = $"{PlayerDataManager.Instance.playerName} влияние: {region.playerInfluence:F1}%";
+        botInfluenceText.text = $"Влияние на бота: {region.botInfluence:F1}%";
+        OnCategorySelected(0); // Зарежда първата категория
     }
 
+    // Публичен метод за показване (извиква се от RegionInteraction)
+   
     public void SetRegion(RegionData region)
     {
         selectedRegion = region;
@@ -177,6 +213,7 @@ public class ActionPanel : MonoBehaviour
         {
             Debug.LogWarning("Недостатъчен бюджет за изпълнение на действието.");
         }
+        GameManager.Instance.EndPlayerTurn(); // Важно! Предава хода на бота
     }
 
 }

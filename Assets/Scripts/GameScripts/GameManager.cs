@@ -2,6 +2,7 @@
 using TMPro;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
     public int totalRounds = 10;
     public Player player;
     public Bot bot;
+   
 
     public TextMeshProUGUI roundCounterText; //Рундове - текст
     public GameObject gameOverPanel; // Край на играта - панел
@@ -26,9 +28,92 @@ public class GameManager : MonoBehaviour
 
     private bool isGameOver = false;
 
+    public GameObject[] regions; // Референции към GameObjects на областите (дърпай ги в Inspector)
+    public bool isPlayerTurn = true;
+
+
+    public static GameManager Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // Опционално, ако искаш да запазиш GameManager между сцени
+        }
+        else
+        {
+            Destroy(gameObject); // Предотвратява дублиране
+        }
+    }
+    private void StartPlayerTurn()
+    {
+        isPlayerTurn = true;
+        Debug.Log("Ред на играча! Избери област.");
+    }
+
+    private void StartBotTurn()
+    {
+        isPlayerTurn = false;
+        StartCoroutine(BotTakesTurnAfterDelay());
+      //  StartCoroutine(BotSelectsRegion());
+    }
+    
+
+    private IEnumerator BotSelectsRegion()
+    {
+        yield return new WaitForSeconds(1.5f); // Забавяне за по-естествено поведение
+
+        // Филтрирай само неутрални области (без цвят или с default цвят)
+        List<GameObject> availableRegions = new List<GameObject>();
+        foreach (var region in regions)
+        {
+            SpriteRenderer renderer = region.GetComponent<SpriteRenderer>();
+            if (renderer.color == Color.white)
+            { // Ако все още е неутрална
+                availableRegions.Add(region);
+            }
+        }
+
+        if (availableRegions.Count > 0 && bot.SpendMoney(100f))
+        { // Примерна цена
+            int randomIndex = Random.Range(0, availableRegions.Count);
+            SpriteRenderer botRenderer = availableRegions[randomIndex].GetComponent<SpriteRenderer>();
+            botRenderer.color = PlayerDataManager.Instance.botColor; // Оцветява в цвета на бота
+            botActionsTaken++;
+            UpdateBotBudgetDisplay();
+        }
+
+        yield return new WaitForSeconds(0.5f);
+        StartPlayerTurn(); // Обратно към играча
+    }
+
+    public void OnRegionClicked(GameObject region)
+    {
+        if (!isPlayerTurn || isGameOver) return;
+
+        SpriteRenderer renderer = region.GetComponent<SpriteRenderer>();
+        if (renderer == null)
+        {
+            Debug.LogError("Няма SpriteRenderer на региона!");
+            return;
+        }
+
+        if (player.SpendMoney(100f))
+        { // Примерна цена
+            renderer.color = PlayerDataManager.Instance.playerColor;
+            playerActionsTaken++;
+            UpdatePlayerBudgetDisplay();
+            EndPlayerTurn(); // Предава хода на бота
+        }
+    }
+    void Update()
+    {
+        Debug.Log($"Състояние: {(isPlayerTurn ? "Ред на играча" : "Ред на бота")}");
+    }
     void Start()
     {
-        playerTotalMandates = 0;
+     /*   playerTotalMandates = 0;
         botTotalMandates = 0;
 
         if (player == null)
@@ -38,9 +123,20 @@ public class GameManager : MonoBehaviour
         if (bot == null)
         {
             bot = FindObjectOfType<Bot>();
+            if (bot == null) Debug.LogError("Няма Bot обект в сцената!");
         }
-
-        UpdateRoundCounter();
+     */
+    /*    ActionPanel actionPanel = FindObjectOfType<ActionPanel>();
+        if (actionPanel != null)
+        {
+            actionPanel.gameObject.SetActive(true);
+        }
+        else
+        {
+            Debug.LogError("ActionPanel не е намерен!");
+        }
+    */
+    /*    UpdateRoundCounter();
         UpdatePlayerBudgetDisplay();
         UpdateBotBudgetDisplay();
 
@@ -66,23 +162,58 @@ public class GameManager : MonoBehaviour
         {
             gameOverPanel.SetActive(false);
         }
+    */
+        StartPlayerTurn();
     }
 
     // Край на хода на играча
     public void EndPlayerTurn()
     {
+        /*    if (isGameOver) return;
+
+            Debug.Log("Player has ended their turn.");
+            StartCoroutine(BotTakesTurnAfterDelay());
+        */
         if (isGameOver) return;
 
-        Debug.Log("Player has ended their turn.");
+        isPlayerTurn = false; // Критично добавяне!
+        Debug.Log("Край на хода на играча. Ботът започва...");
         StartCoroutine(BotTakesTurnAfterDelay());
     }
 
     // Забавяне на хода на бота
     private IEnumerator BotTakesTurnAfterDelay()
     {
-        yield return new WaitForSeconds(1f);
-        BotTakesTurn();
+        yield return new WaitForSeconds(1.5f); // Забавяне за UX
+        if (!isPlayerTurn)
+        {
+            // Избери случайна неутрална област
+            GameObject[] allRegions = GameObject.FindGameObjectsWithTag("Region"); // Добави tag "Region" на регионите!
+            List<GameObject> neutralRegions = new List<GameObject>();
+
+            foreach (var region in allRegions)
+            {
+                SpriteRenderer renderer = region.GetComponent<SpriteRenderer>();
+                if (renderer.color == Color.white)
+                {
+                    neutralRegions.Add(region);
+                }
+            }
+
+            if (neutralRegions.Count > 0 && bot.SpendMoney(100f))
+            {
+                int randomIndex = Random.Range(0, neutralRegions.Count);
+                SpriteRenderer botRenderer = neutralRegions[randomIndex].GetComponent<SpriteRenderer>();
+                botRenderer.color = PlayerDataManager.Instance.botColor;
+                botActionsTaken++;
+                UpdateBotBudgetDisplay();
+            }
+
+            yield return new WaitForSeconds(0.5f);
+            StartPlayerTurn(); // Обратно към играча
+        }
     }
+
 
     // Ход на бота
     private void BotTakesTurn()

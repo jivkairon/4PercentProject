@@ -3,8 +3,9 @@
 public class RegionInteraction : MonoBehaviour
 {
     public GameObject actionPanel; 
-    private RegionData regionData; 
-
+    private RegionData regionData;
+    void OnMouseEnter() => Debug.Log($"Мишката е върху {name}");
+    void OnMouseExit() => Debug.Log($"Мишката напусна {name}");
     void Start()
     {
         regionData = GetComponent<RegionData>();
@@ -23,8 +24,22 @@ public class RegionInteraction : MonoBehaviour
             Debug.LogError("ActionPanel reference is not assigned.", this);
         }
     }
+    private void OnMouseDown()
+    {
+        if (!GameManager.Instance.isPlayerTurn) return;
 
-    void OnMouseDown()
+        // 1. Оцветяване на региона
+        //   GetComponent<SpriteRenderer>().color = PlayerDataManager.Instance.playerColor;
+
+        GetComponent<SpriteRenderer>().color = Color.magenta; // Ярък тестов цвят
+
+        // 2. Показване на панела
+        ActionPanel panel = FindObjectOfType<ActionPanel>(true); // Намира дори скрити панели
+        panel.ShowForRegion(GetComponent<RegionData>());
+
+        Debug.Log($"Избран регион: {name}"); // За тестване
+    }
+ /*   void OnMouseDown()
     {
         GameManager gameManager = FindObjectOfType<GameManager>();
 
@@ -54,4 +69,5 @@ public class RegionInteraction : MonoBehaviour
             Debug.LogError("ActionPanel or RegionData is not assigned.", this);
         }
     }
+ */
 }
