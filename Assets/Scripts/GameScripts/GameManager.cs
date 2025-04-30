@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     public Player player;
     public Bot bot;
    
-
     public TextMeshProUGUI roundCounterText; //Рундове - текст
     public GameObject gameOverPanel; // Край на играта - панел
     public TextMeshProUGUI gameOverText;
@@ -31,6 +30,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] regions; // Референции към GameObjects на областите (дърпай ги в Inspector)
     public bool isPlayerTurn = true;
 
+    private GameObject selectedRegion; // Add this at the top of the class
 
     public static GameManager Instance { get; private set; }
 
@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
             SpriteRenderer botRenderer = availableRegions[randomIndex].GetComponent<SpriteRenderer>();
             botRenderer.color = PlayerDataManager.Instance.botColor; // Оцветява в цвета на бота
             botActionsTaken++;
-            UpdateBotBudgetDisplay();
+            bot.UpdateBotBudgetDisplay();
         }
 
         yield return new WaitForSeconds(0.5f);
@@ -99,17 +99,41 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        if (player.SpendMoney(100f))
-        { // Примерна цена
-            renderer.color = PlayerDataManager.Instance.playerColor;
+        selectedRegion = region; // Save the selected region for use in actions
+        Debug.Log("Избрана област: " + region.name);
+    }
+
+    public void PerformPlayerAction(float cost)
+    {
+        if (!isPlayerTurn || !selectedRegion || isGameOver) return;
+
+        if (player.SpendMoney(cost))
+        {
+            // Color change happens here
+            SpriteRenderer renderer = selectedRegion.GetComponent<SpriteRenderer>();
+            if (renderer != null)
+            {
+                renderer.color = PlayerDataManager.Instance.playerColor;
+            }
+
+            // Influence update, budget display, etc.
+            RegionData regionData = selectedRegion.GetComponent<RegionData>();
+            if (regionData != null)
+            {
+                float influence = 10f; // Example influence value
+                regionData.playerInfluence += influence;
+                regionData.UpdateInfluenceDisplay();
+            }
+
+            player.UpdatePlayerBudgetDisplay();
             playerActionsTaken++;
-            UpdatePlayerBudgetDisplay();
-            EndPlayerTurn(); // Предава хода на бота
+            EndPlayerTurn();
         }
     }
+
     void Update()
     {
-        Debug.Log($"Състояние: {(isPlayerTurn ? "Ред на играча" : "Ред на бота")}");
+        //Debug.Log($"Състояние: {(isPlayerTurn ? "Ред на играча" : "Ред на бота")}");
     }
     void Start()
     {
@@ -137,8 +161,8 @@ public class GameManager : MonoBehaviour
         }
     */
     /*    UpdateRoundCounter();
-        UpdatePlayerBudgetDisplay();
-        UpdateBotBudgetDisplay();
+        player.pdatePlayerBudgetDisplay();
+        bot.UpdateBotBudgetDisplay();
 
         if (nextRoundButton != null)
         {
@@ -206,7 +230,7 @@ public class GameManager : MonoBehaviour
                 SpriteRenderer botRenderer = neutralRegions[randomIndex].GetComponent<SpriteRenderer>();
                 botRenderer.color = PlayerDataManager.Instance.botColor;
                 botActionsTaken++;
-                UpdateBotBudgetDisplay();
+                bot.UpdateBotBudgetDisplay();
             }
 
             yield return new WaitForSeconds(0.5f);
@@ -387,45 +411,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Ъпдейт на текста на бюджета на играча
-    public void UpdatePlayerBudgetDisplay()
-    {
-        if (player != null)
-        {
-            if (player.budgetText != null)
-            {
-                player.budgetText.text = $"{PlayerDataManager.Instance.playerName} бюджет: {player.budget:F1} лв.";
-            }
-            else
-            {
-                Debug.LogError("Player budgetText is not assigned.");
-            }
-        }
-        else
-        {
-            Debug.LogError("Player is not assigned.");
-        }
-    }
-
-    // Ъпдейт на текста на бюджета на бота
-    public void UpdateBotBudgetDisplay()
-    {
-        if (bot != null)
-        {
-            if (bot.budgetText != null)
-            {
-                bot.budgetText.text = $"Бюджет на бота: {bot.budget:F1} лв.";
-            }
-            else
-            {
-                Debug.LogError("Bot budgetText is not assigned.");
-            }
-        }
-        else
-        {
-            Debug.LogError("Bot is not assigned.");
-        }
-    }
 
     // Брояч на действията на играча
     public void PlayerActionTaken()
@@ -507,8 +492,8 @@ public class GameManager : MonoBehaviour
         }
 
         UpdateRoundCounter();
-        UpdatePlayerBudgetDisplay();
-        UpdateBotBudgetDisplay();
+        player.UpdatePlayerBudgetDisplay();
+        bot.UpdateBotBudgetDisplay();
     }
 
     public bool IsGameOver()

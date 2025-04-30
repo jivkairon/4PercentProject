@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System.Linq;
+using UnityEngine.UIElements;
 
 public class Bot : MonoBehaviour
 {
@@ -232,6 +233,19 @@ public class Bot : MonoBehaviour
 
         overallInfluence = Mathf.Clamp(overallInfluence, 0f, 100f);
         UpdateOverallInfluenceDisplay();
+    }
+
+    // Ъпдейт на текста на бюджета на бота
+    public void UpdateBotBudgetDisplay()
+    {
+        if (budgetText != null)
+        {
+            budgetText.text = $"Бюджет на бота: {budget:F1} лв.";
+        }
+        else
+        {
+            Debug.LogError("Bot budgetText is not assigned.");
+        }
     }
 }
 /*using System.Collections;

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Numerics;
 
 public class Player : MonoBehaviour
 {
@@ -56,18 +57,29 @@ public class Player : MonoBehaviour
     public void UpdateOverallInfluenceDisplay()
     {
         overallInfluence = Mathf.Clamp(overallInfluence, 0f, 100f);
-        Debug.Log($"Updating Overall Influence Display: {overallInfluence:F1}%");
 
         if (overallInfluenceText != null)
         {
             // Replace "Вашето" with the player's party name
             overallInfluenceText.text = $"{PlayerDataManager.Instance.playerName} влияние: {overallInfluence:F1}%";
-            Debug.Log($"UI Updated: New Overall Influence = {overallInfluence}");
         }
         else
         {
             Debug.LogError("Player overallInfluenceText is not assigned in the inspector.");
         }
+    }
+
+    // Ъпдейт на текста на бюджета на играча
+    public void UpdatePlayerBudgetDisplay()
+    {
+        if (budgetText != null)
+        {
+            budgetText.text = $"{PlayerDataManager.Instance.playerName} бюджет: {budget:F1} лв.";
+        }
+        else
+        {
+            Debug.LogError("Player budgetText is not assigned.");
+        }   
     }
 
     // Метод за използване на пари и намаляване на бюджета
@@ -94,12 +106,10 @@ public class Player : MonoBehaviour
 
         foreach (var region in regions)
         {
-            Debug.Log($"Checking {region.regionName} Player Influence Before Sum: {region.playerInfluence}");
             overallInfluence += region.playerInfluence;
         }
 
         overallInfluence = Mathf.Clamp(overallInfluence, 0f, 100f);
-        Debug.Log($"Final Player Overall Influence: {overallInfluence}");
         UpdateOverallInfluenceDisplay();
     }
 
@@ -108,14 +118,10 @@ public class Player : MonoBehaviour
     {
         if (SpendMoney(cost))
         {
-            Debug.Log($"Performing action in {region.regionName} | Cost: {cost}, Influence: {influence}");
-
             region.UpdatePlayerInfluence(influence); // Ъпдейт на влияние на играча върху регион
-            Debug.Log($"Updated region influence: {region.playerInfluence}");
 
             CalculateOverallInfluence(); // Изчисляване на влияние на играча върху страната 
 
-            Debug.Log($"Overall Influence after action: {overallInfluence}");
             gameManager.PlayerActionTaken(); // Съобщение към GameManager
         }
         else

@@ -23,21 +23,8 @@ public class RegionInteraction : MonoBehaviour
         {
             Debug.LogError("ActionPanel not found in the scene. Make sure it exists!", this);
         }
-        else
-        {
-            Debug.Log($"Found ActionPanel: {actionPanelScript.gameObject.name}");
-        }
     }
 
-    void OnMouseEnter()
-    {
-        Debug.Log($"Мишката е върху {name}");
-    }
-
-    void OnMouseExit()
-    {
-        Debug.Log($"Мишката напусна {name}");
-    }
 
     private void OnMouseDown()
     {
@@ -47,8 +34,6 @@ public class RegionInteraction : MonoBehaviour
             Debug.Log("Not player's turn - skipping interaction");
             return;
         }
-
-        Debug.Log($"Clicked on region: {name}");
 
         // Проверка дали имаме нужните компоненти
         if (regionData == null)
@@ -78,7 +63,6 @@ public class RegionInteraction : MonoBehaviour
         }
 
         // Показване на панела и задаване на избрания регион
-        Debug.Log($"Showing action panel for region: {name}");
         actionPanelScript.ShowForRegion(regionData);
     }
 }

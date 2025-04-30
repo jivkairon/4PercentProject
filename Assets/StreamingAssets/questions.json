@@ -1,0 +1,149 @@
+﻿{
+  "questions": [
+    {
+      "questionId": "1a2b3c4d-5e6f-7g8h-9i0j",
+      "questionText": "Коя е столицата на България?",
+      "category": "География",
+      "difficulty": 1,
+      "imageRef": "",
+      "answers": [
+        {
+          "answerText": "София",
+          "isCorrect": true,
+          "feedback": "Точно така! София е столицата на България от 1879 г."
+        },
+        {
+          "answerText": "Пловдив",
+          "isCorrect": false,
+          "feedback": "Пловдив е вторият по големина град в България."
+        },
+        {
+          "answerText": "Варна",
+          "isCorrect": false,
+          "feedback": "Варна е третият по големина град в България."
+        },
+        {
+          "answerText": "Бургас",
+          "isCorrect": false,
+          "feedback": "Бургас е четвъртият по големина град в България."
+        }
+      ]
+    },
+    {
+      "questionId": "2b3c4d5e-6f7g-8h9i-0j1k",
+      "questionText": "Колко планети има в Слънчевата система?",
+      "category": "Астрономия",
+      "difficulty": 2,
+      "imageRef": "",
+      "answers": [
+        {
+          "answerText": "7",
+          "isCorrect": false,
+          "feedback": "Неправилно. В Слънчевата система има 8 планети."
+        },
+        {
+          "answerText": "8",
+          "isCorrect": true,
+          "feedback": "Правилно! След 2006 г. Плутон вече не се счита за планета."
+        },
+        {
+          "answerText": "9",
+          "isCorrect": false,
+          "feedback": "Преди 2006 г. се смяташе, че са 9, но Плутон беше прекласифициран."
+        },
+        {
+          "answerText": "6",
+          "isCorrect": false,
+          "feedback": "Неправилно. В Слънчевата система има 8 планети."
+        }
+      ]
+    },
+    {
+      "questionId": "3c4d5e6f-7g8h-9i0j-1k2l",
+      "questionText": "Кой е написал 'Под игото'?",
+      "category": "Литература",
+      "difficulty": 1,
+      "imageRef": "",
+      "answers": [
+        {
+          "answerText": "Иван Вазов",
+          "isCorrect": true,
+          "feedback": "Правилно! Иван Вазов е написал романа 'Под игото' през 1888 г."
+        },
+        {
+          "answerText": "Христо Ботев",
+          "isCorrect": false,
+          "feedback": "Христо Ботев е известен поет и революционер, но не е автор на 'Под игото'."
+        },
+        {
+          "answerText": "Пейо Яворов",
+          "isCorrect": false,
+          "feedback": "Пейо Яворов е известен български поет, но не е автор на 'Под игото'."
+        },
+        {
+          "answerText": "Елин Пелин",
+          "isCorrect": false,
+          "feedback": "Елин Пелин е известен с разказите си, но не е автор на 'Под игото'."
+        }
+      ]
+    },
+    {
+      "questionId": "4d5e6f7g-8h9i-0j1k-2l3m",
+      "questionText": "Коя е най-дългата река в България?",
+      "category": "География",
+      "difficulty": 2,
+      "imageRef": "",
+      "answers": [
+        {
+          "answerText": "Дунав",
+          "isCorrect": false,
+          "feedback": "Дунав е най-голямата река, която минава през България, но само по северната граница. Тя не е изцяло в територията на страната."
+        },
+        {
+          "answerText": "Искър",
+          "isCorrect": true,
+          "feedback": "Правилно! Искър е най-дългата река, която тече изцяло в територията на България."
+        },
+        {
+          "answerText": "Марица",
+          "isCorrect": false,
+          "feedback": "Марица е втората по дължина река в България."
+        },
+        {
+          "answerText": "Струма",
+          "isCorrect": false,
+          "feedback": "Струма е една от по-големите реки в България, но не е най-дългата."
+        }
+      ]
+    },
+    {
+      "questionId": "5e6f7g8h-9i0j-1k2l-3m4n",
+      "questionText": "Колко е 7 × 8?",
+      "category": "Математика",
+      "difficulty": 1,
+      "imageRef": "",
+      "answers": [
+        {
+          "answerText": "56",
+          "isCorrect": true,
+          "feedback": "Правилно! 7 × 8 = 56"
+        },
+        {
+          "answerText": "54",
+          "isCorrect": false,
+          "feedback": "Неправилно. 7 × 8 = 56"
+        },
+        {
+          "answerText": "48",
+          "isCorrect": false,
+          "feedback": "Неправилно. Може би смесвате с 6 × 8 = 48. Правилният отговор е 56."
+        },
+        {
+          "answerText": "64",
+          "isCorrect": false,
+          "feedback": "Неправилно. Може би смесвате с 8 × 8 = 64. Правилният отговор е 56."
+        }
+      ]
+    }
+  ]
+}

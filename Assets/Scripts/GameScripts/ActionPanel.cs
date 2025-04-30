@@ -22,15 +22,6 @@ public class ActionPanel : MonoBehaviour
 
     private bool isInitialized = false;
 
-    void OnEnable()
-    {
-        Debug.Log("Панелът се активира!");
-    }
-
-    void OnDisable()
-    {
-        Debug.Log("Панелът се деактивира!");
-    }
 
     private void Awake()
     {
@@ -52,7 +43,6 @@ public class ActionPanel : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        Debug.Log("ActionPanel initialized and ready to use");
     }
 
     void InitializePanel()
@@ -100,8 +90,6 @@ public class ActionPanel : MonoBehaviour
             return;
         }
 
-        Debug.Log($"ShowForRegion called for {region.regionName}");
-
         // Задаваме последен в йерархията, за да е най-отгоре
         transform.SetAsLastSibling();
 
@@ -146,7 +134,6 @@ public class ActionPanel : MonoBehaviour
             return;
         }
 
-        Debug.Log($"Setting region to {region.regionName}");
         selectedRegion = region;
 
         // Име на регион и влияния
@@ -279,13 +266,9 @@ public class ActionPanel : MonoBehaviour
         // Изпълняване на действието, ако играча има пари
         if (player.SpendMoney(cost))
         {
-            Debug.Log($"Performing action: {action.name} in {selectedRegion.regionName} | Cost: {cost}, Influence: {influence}");
-
             selectedRegion.UpdatePlayerInfluence(influence); // Ъпдейт на влияние на играча
             player.CalculateOverallInfluence(); // Изчисление на влияние на играча
             player.UpdateOverallInfluenceDisplay(); // Ъпдейт на текста на влиянието
-
-            Debug.Log($"New Player Overall Influence: {player.overallInfluence}");
 
             gameObject.SetActive(false); // Скриване на панел
         }
@@ -299,6 +282,14 @@ public class ActionPanel : MonoBehaviour
         {
             GameManager.Instance.EndPlayerTurn();
         }
+    }
+
+    // Example button callback
+    public void OnCampaignButtonClicked()
+    {
+        var action = currentActions[actionDropdown.value];
+        float cost = selectedRegion.GetActionCost(action);
+        GameManager.Instance.PerformPlayerAction(cost); // or different cost
     }
 }
 

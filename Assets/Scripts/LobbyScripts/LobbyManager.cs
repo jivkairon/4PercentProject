@@ -36,7 +36,6 @@ public class LobbyManager : MonoBehaviour
 
     public void StartGame()
     {
-        Debug.Log("StartGame called!");
 
         if (selectedPlayer == -1)
         {
@@ -121,9 +120,7 @@ public class LobbyManager : MonoBehaviour
     // Избран на цвят
     void SelectColor(int dropdownIndex)
     {
-        Debug.Log($"Dropdown index selected: {dropdownIndex}");
         Color selectedColor = GetColorByIndex(dropdownIndex);
-        Debug.Log($"Selected color: {selectedColor}");
         if (colorPreview != null)
         {
             colorPreview.color = selectedColor; // Ъпдейт на preview
