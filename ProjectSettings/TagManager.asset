@@ -8,6 +8,7 @@ TagManager:
   - Region
   - ActionPanel
   - QustionPanel
+  - QuestionPanel
   layers:
   - Default
   - TransparentFX

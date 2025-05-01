@@ -33,7 +33,17 @@ public class LobbyManager : MonoBehaviour
 
         settingsPanel.SetActive(false);
     }
-
+    void OnSceneLoaded()
+    {
+        if (RegionInteraction.Instance != null)
+        {
+            RegionInteraction.Instance.ResetAllPanels();
+        }
+        else
+        {
+            Debug.LogWarning("RegionInteraction instance is missing!");
+        }
+    }
     public void StartGame()
     {
 

@@ -10,8 +10,8 @@ public class RegionData : MonoBehaviour
 
     public TextMeshProUGUI playerInfluenceText;
     public TextMeshProUGUI botInfluenceText;
+    public bool isCity; // Дали е голям град
 
-    // Базови цени и влияния на действия
     [System.Serializable]
     public struct ActionData
     {
@@ -20,6 +20,7 @@ public class RegionData : MonoBehaviour
         public float baseInfluence;
     }
 
+    // Действия за политически кампании
     public ActionData[] politicalCampaigns = new ActionData[]
     {
         new ActionData { name = "Реч на площада", baseCost = 200, baseInfluence = 10 },
@@ -27,6 +28,7 @@ public class RegionData : MonoBehaviour
         new ActionData { name = "Телевизионна реклама", baseCost = 1000, baseInfluence = 40 }
     };
 
+    // Социални инициативи
     public ActionData[] socialInitiatives = new ActionData[]
     {
         new ActionData { name = "Ремонт на училище", baseCost = 500, baseInfluence = 25 },
@@ -34,6 +36,7 @@ public class RegionData : MonoBehaviour
         new ActionData { name = "Подкрепа за пенсионери", baseCost = 600, baseInfluence = 20 }
     };
 
+    // Икономически мерки
     public ActionData[] economicMeasures = new ActionData[]
     {
         new ActionData { name = "Субсидии за земеделци", baseCost = 700, baseInfluence = 35 },
@@ -41,72 +44,69 @@ public class RegionData : MonoBehaviour
         new ActionData { name = "Инфраструктурни проекти", baseCost = 1500, baseInfluence = 60 }
     };
 
-    // Цена на действие според брой мандати
+    // Цена на действие според мандати
     public float GetActionCost(ActionData action)
     {
-        return action.baseCost * (mandates / 240f); 
+        if (mandates <= 0) return action.baseCost;
+        return action.baseCost * (mandates / 240f);
     }
 
-    // Влияние на действие според брой мандати
-    public bool isCity; // Маркирайте големите градове в Inspector
-
+    // Влияние на действие
     public float GetActionInfluence(ActionData action)
     {
+        if (mandates <= 0) return action.baseInfluence;
         float baseValue = action.baseInfluence * (mandates / 240f);
-        return isCity ? baseValue * 0.7f : baseValue * 1.3f; // Градовете са по-сложни
+        return isCity ? baseValue * 0.7f : baseValue * 1.3f;
     }
-    /*  public float GetActionInfluence(ActionData action)
-      {
-          return action.baseInfluence * (mandates / 240f); 
-      }
-    */
-    // Изчисляване на влияние върху регион като процент от мандати на регион
+
+    // Процент влияние на играча
     public float GetPlayerInfluencePercentage()
     {
+        if (mandates <= 0) return 0f;
         return (playerInfluence / mandates) * 100f;
     }
 
+    // Процент влияние на бота
     public float GetBotInfluencePercentage()
     {
+        if (mandates <= 0) return 0f;
         return (botInfluence / mandates) * 100f;
     }
 
-    // Ъпдейт на текст на влияние
+    // Обновяване на визуализацията
     public void UpdateInfluenceDisplay()
     {
         playerInfluence = Mathf.Clamp(playerInfluence, 0f, mandates);
         botInfluence = Mathf.Clamp(botInfluence, 0f, mandates);
 
-        // Изчисляване на проценти на влияние за регион
-        float playerInfluencePercent = GetPlayerInfluencePercentage();
-        float botInfluencePercent = GetBotInfluencePercentage();
-
-        // Ъпдейт на текста
         if (playerInfluenceText != null)
         {
-            playerInfluenceText.text = $"{PlayerDataManager.Instance.playerName} влияние: {playerInfluencePercent:F1}%";
+            playerInfluenceText.text = $"{PlayerDataManager.Instance.playerName} влияние: {GetPlayerInfluencePercentage():F1}%";
         }
         if (botInfluenceText != null)
         {
-            botInfluenceText.text = $"Влияние на бота: {botInfluencePercent:F1}%";
+            botInfluenceText.text = $"Влияние на бота: {GetBotInfluencePercentage():F1}%";
         }
     }
 
-    // Ъпдейт на влиянието в регион
+    // Обновяване на влиянието на играча
     public void UpdatePlayerInfluence(float amount)
     {
         playerInfluence += amount;
-        playerInfluence = Mathf.Clamp(playerInfluence, 0f, 100f);
         UpdateInfluenceDisplay();
-
-        Debug.Log($"Updated {regionName} player influence: {playerInfluence}");
     }
 
+    // Обновяване на влиянието на бота
     public void UpdateBotInfluence(float amount)
     {
         botInfluence += amount;
-        botInfluence = Mathf.Clamp(botInfluence, 0f, 100f);
         UpdateInfluenceDisplay();
     }
 
+    // Промяна на цвета на маркера
+    public void SetMarkerColor(Color color)
+    {
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (sr != null) sr.color = color;
+    }
 }

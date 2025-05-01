@@ -123,6 +123,128 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &23034440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 23034441}
+  - component: {fileID: 23034444}
+  - component: {fileID: 23034443}
+  - component: {fileID: 23034442}
+  m_Layer: 5
+  m_Name: Ans4Bot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &23034441
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23034440}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 459787793}
+  m_Father: {fileID: 795851597}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 6.6, y: -103}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &23034442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23034440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 23034443}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &23034443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23034440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &23034444
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23034440}
+  m_CullTransparentMesh: 1
 --- !u!1001 &43283223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -687,7 +809,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1230816531}
-  - {fileID: 2102425013}
+  - {fileID: 1362766747}
   - {fileID: 2087322292}
   - {fileID: 2075881661}
   - {fileID: 1731255484}
@@ -697,6 +819,7 @@ RectTransform:
   - {fileID: 1564175163}
   - {fileID: 1089689174}
   - {fileID: 1650017491}
+  - {fileID: 795851597}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1274,6 +1397,141 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &330253942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 330253943}
+  - component: {fileID: 330253945}
+  - component: {fileID: 330253944}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &330253943
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330253942}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1750549591}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &330253944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330253942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Button
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &330253945
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330253942}
+  m_CullTransparentMesh: 1
 --- !u!1 &330278467 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 3a6a6aa408855ab42a9a14b7d85e94f9, type: 3}
@@ -1541,6 +1799,128 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 347950409}
   m_CullTransparentMesh: 1
+--- !u!1 &357289399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 357289400}
+  - component: {fileID: 357289403}
+  - component: {fileID: 357289402}
+  - component: {fileID: 357289401}
+  m_Layer: 5
+  m_Name: NextButtonBot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &357289400
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357289399}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1294084668}
+  m_Father: {fileID: 795851597}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 6.6, y: -204.1}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &357289401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357289399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 357289402}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &357289402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357289399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &357289403
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357289399}
+  m_CullTransparentMesh: 1
 --- !u!1 &365593642
 GameObject:
   m_ObjectHideFlags: 0
@@ -1785,6 +2165,128 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377046654}
   m_CullTransparentMesh: 1
+--- !u!1 &379429830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 379429831}
+  - component: {fileID: 379429834}
+  - component: {fileID: 379429833}
+  - component: {fileID: 379429832}
+  m_Layer: 5
+  m_Name: Ans3Bot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &379429831
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379429830}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1567685547}
+  m_Father: {fileID: 795851597}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -60.9}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &379429832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379429830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 379429833}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &379429833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379429830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &379429834
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379429830}
+  m_CullTransparentMesh: 1
 --- !u!1 &394271691
 GameObject:
   m_ObjectHideFlags: 0
@@ -2017,18 +2519,6 @@ PolygonCollider2D:
       - {x: 0.30710185, y: -0.33935943}
       - {x: 0.4092372, y: -0.23061503}
       - {x: 0.70184606, y: 0.16893674}
---- !u!114 &423684136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 423684133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &423684138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2047,6 +2537,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -2081,7 +2572,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1001 &426198524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2318,6 +2808,141 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445045775}
+  m_CullTransparentMesh: 1
+--- !u!1 &459787792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 459787793}
+  - component: {fileID: 459787795}
+  - component: {fileID: 459787794}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &459787793
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459787792}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 23034441}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &459787794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459787792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Button
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &459787795
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459787792}
   m_CullTransparentMesh: 1
 --- !u!1 &481313605 stripped
 GameObject:
@@ -3145,18 +3770,6 @@ PolygonCollider2D:
       - {x: 0.19935915, y: -0.26291418}
       - {x: 0.19722532, y: -0.14154227}
       - {x: 0.10291529, y: 0.025190637}
---- !u!114 &589174383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 481313605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &589174385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3175,6 +3788,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -3209,7 +3823,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1001 &593958915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3371,6 +3984,141 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8742538545776668643, guid: 2f672cf5494a2d04da2a422adab038db, type: 3}
   m_PrefabInstance: {fileID: 610234769}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &611714215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 611714216}
+  - component: {fileID: 611714218}
+  - component: {fileID: 611714217}
+  m_Layer: 5
+  m_Name: QuestionTextBot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &611714216
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611714215}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 795851597}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -7.7, y: 194.9}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &611714217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611714215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &611714218
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611714215}
+  m_CullTransparentMesh: 1
 --- !u!1 &656561207 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 91e4bbd374d75134f99b58d3f7d0cf76, type: 3}
@@ -3424,18 +4172,6 @@ PolygonCollider2D:
       - {x: 0.365719, y: -0.21900894}
       - {x: 0.4937263, y: -0.08758396}
       - {x: 0.500469, y: 0.42136008}
---- !u!114 &656561210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 656561207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &656561212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3454,6 +4190,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -3488,7 +4225,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1001 &719245199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3604,18 +4340,6 @@ PolygonCollider2D:
       - {x: -0.19839276, y: -0.14290252}
       - {x: 0.08728494, y: -0.020099163}
       - {x: 0.17067029, y: 0.09755076}
---- !u!114 &774953534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 774953531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &774953536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3634,6 +4358,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -3668,7 +4393,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1 &775943398
 GameObject:
   m_ObjectHideFlags: 0
@@ -3796,6 +4520,158 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 01c8041b40c7c3c488b1e0a89d2b564a, type: 3}
   m_PrefabInstance: {fileID: 1155521719}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &795851596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 795851597}
+  - component: {fileID: 795851600}
+  - component: {fileID: 795851599}
+  - component: {fileID: 795851598}
+  - component: {fileID: 795851601}
+  m_Layer: 5
+  m_Name: QustionPanelBot
+  m_TagString: QuestionPanel
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &795851597
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795851596}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 611714216}
+  - {fileID: 1750549591}
+  - {fileID: 1238911309}
+  - {fileID: 379429831}
+  - {fileID: 23034441}
+  - {fileID: 357289400}
+  - {fileID: 1724882338}
+  - {fileID: 1954503614}
+  m_Father: {fileID: 120317494}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.00012207031, y: 99.640015}
+  m_SizeDelta: {x: -465.27002, y: -1871.6799}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &795851598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795851596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 403f16d28bed77946b6f2158e48dae72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questionText: {fileID: 611714217}
+  answerButtons:
+  - {fileID: 1750549592}
+  - {fileID: 1238911310}
+  - {fileID: 379429832}
+  - {fileID: 23034442}
+  buttonTexts:
+  - {fileID: 330253944}
+  - {fileID: 867166285}
+  - {fileID: 1567685548}
+  - {fileID: 459787794}
+  feedbackText: {fileID: 1724882339}
+  nextButton: {fileID: 357289401}
+  scoreText: {fileID: 1954503615}
+--- !u!114 &795851599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795851596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &795851600
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795851596}
+  m_CullTransparentMesh: 1
+--- !u!114 &795851601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795851596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 551b0bfa067c35248b0fe56d2dc8902c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questionText: {fileID: 611714217}
+  answerButtons:
+  - {fileID: 1750549592}
+  - {fileID: 1238911310}
+  - {fileID: 379429832}
+  - {fileID: 23034442}
+  answerTexts:
+  - {fileID: 330253944}
+  - {fileID: 867166285}
+  - {fileID: 1567685548}
+  - {fileID: 459787794}
+  feedbackText: {fileID: 1724882339}
+  feedbackPanel: {fileID: 0}
+  questions:
+  - questionText: 
+    answers: []
+    correctAnswerIndex: 0
+    specificRegions: []
+  - questionText: 
+    answers: []
+    correctAnswerIndex: 0
+    specificRegions: []
+  - questionText: 
+    answers: []
+    correctAnswerIndex: 0
+    specificRegions: []
+  isBotPanel: 0
+  externalQuestionManager: {fileID: 0}
 --- !u!1 &802189111 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 63181d72561d7ae45af79cd270110f85, type: 3}
@@ -3839,18 +4715,6 @@ PolygonCollider2D:
       - {x: 0.3813562, y: 0.0026118606}
       - {x: 0.71350694, y: 0.0550685}
       - {x: 0.70514274, y: 0.6173516}
---- !u!114 &802189114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802189111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &802189116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3869,6 +4733,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -3903,7 +4768,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1 &813965011 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 9a332a558136d8e45b5d15ed114f90df, type: 3}
@@ -3960,18 +4824,6 @@ PolygonCollider2D:
       - {x: 0.7564916, y: -0.23995218}
       - {x: 0.5619872, y: -0.24367233}
       - {x: 0.34653676, y: -0.0308069}
---- !u!114 &829805135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829805132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &829805137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3990,6 +4842,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -4024,7 +4877,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1 &862785223
 GameObject:
   m_ObjectHideFlags: 0
@@ -4106,6 +4958,141 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: f87822e31b543f24fb9969e631a62213, type: 3}
   m_PrefabInstance: {fileID: 1260612329}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &867166283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 867166284}
+  - component: {fileID: 867166286}
+  - component: {fileID: 867166285}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &867166284
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867166283}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1238911309}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &867166285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867166283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Button
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &867166286
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867166283}
+  m_CullTransparentMesh: 1
 --- !u!1001 &872689996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4230,18 +5217,6 @@ PolygonCollider2D:
       - {x: 0.1714414, y: 0.18473454}
       - {x: 0.31890288, y: 0.34410697}
       - {x: 0.4394895, y: 0.33893076}
---- !u!114 &886718593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 886718590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &886718595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4260,6 +5235,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -4294,7 +5270,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1 &900451054
 GameObject:
   m_ObjectHideFlags: 0
@@ -4794,18 +5769,6 @@ PolygonCollider2D:
       - {x: 0.48773286, y: -0.76633257}
       - {x: 0.49699146, y: -0.011398822}
       - {x: 0.68911153, y: 0.20692755}
---- !u!114 &973012936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973012933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &973012938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4824,6 +5787,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -4858,7 +5822,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1 &980889360 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 779aaf98033fb5343b081339be07e5b7, type: 3}
@@ -5106,18 +6069,6 @@ PolygonCollider2D:
       - {x: 0.47908008, y: 0.15648542}
       - {x: 0.47485408, y: 0.30431414}
       - {x: 0.72025806, y: 0.5405369}
---- !u!114 &1025756031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 496974014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1025756033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5136,6 +6087,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -5170,7 +6122,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1001 &1034462588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5292,18 +6243,6 @@ PolygonCollider2D:
       - {x: 0.44844723, y: 0.39616713}
       - {x: 0.54645234, y: 0.49979198}
       - {x: 0.5399213, y: 0.6944066}
---- !u!114 &1034462592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 402353490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1034462594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5322,6 +6261,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -5356,7 +6296,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1 &1037669710
 GameObject:
   m_ObjectHideFlags: 0
@@ -5398,7 +6337,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037669710}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5589,18 +6528,6 @@ PolygonCollider2D:
       - {x: 0.4247016, y: -0.106608704}
       - {x: 0.57157964, y: 0.03327637}
       - {x: 0.5757546, y: 0.2736659}
---- !u!114 &1068670103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068670100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1068670105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5619,6 +6546,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -5653,7 +6581,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1 &1079233890
 GameObject:
   m_ObjectHideFlags: 0
@@ -6365,18 +7292,6 @@ PolygonCollider2D:
       - {x: 0.35631347, y: -0.56927377}
       - {x: 0.820933, y: -0.5498987}
       - {x: 1.0338461, y: -0.33607063}
---- !u!114 &1125965349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125965346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1125965351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6395,6 +7310,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -6429,7 +7345,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1001 &1151691928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6562,18 +7477,6 @@ PolygonCollider2D:
       - {x: 0.20033112, y: -0.092714295}
       - {x: 0.6014894, y: -0.096559}
       - {x: 0.9480647, y: 0.25063205}
---- !u!114 &1151691932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 598554595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1151691934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6592,6 +7495,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -6626,7 +7530,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1001 &1155521719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6746,18 +7649,6 @@ PolygonCollider2D:
       - {x: 0.4238249, y: -0.19009487}
       - {x: 0.50732934, y: -0.09555359}
       - {x: 0.5052138, y: 0.34518048}
---- !u!114 &1155521723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781965606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1155521725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6776,6 +7667,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -6810,7 +7702,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1 &1191760956
 GameObject:
   m_ObjectHideFlags: 0
@@ -7177,6 +8068,7 @@ MonoBehaviour:
   regionNameText: {fileID: 2093952471}
   playerInfluenceText: {fileID: 523446069}
   botInfluenceText: {fileID: 1944767671}
+  selectedRegion: {fileID: 0}
 --- !u!82 &1230816535
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7399,6 +8291,128 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1233660309}
+  m_CullTransparentMesh: 1
+--- !u!1 &1238911308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1238911309}
+  - component: {fileID: 1238911312}
+  - component: {fileID: 1238911311}
+  - component: {fileID: 1238911310}
+  m_Layer: 5
+  m_Name: Ans2Bot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1238911309
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238911308}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 867166284}
+  m_Father: {fileID: 795851597}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1238911310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238911308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1238911311}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1238911311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238911308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1238911312
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238911308}
   m_CullTransparentMesh: 1
 --- !u!1 &1241302168
 GameObject:
@@ -7884,18 +8898,6 @@ PolygonCollider2D:
       - {x: -0.018491566, y: -0.91166705}
       - {x: 0.51985323, y: -0.89848405}
       - {x: 0.80105776, y: -0.58996725}
---- !u!114 &1260612333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 865580668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1260612335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7914,6 +8916,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -7948,7 +8951,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1 &1284701260
 GameObject:
   m_ObjectHideFlags: 0
@@ -8113,6 +9115,141 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1294084667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1294084668}
+  - component: {fileID: 1294084670}
+  - component: {fileID: 1294084669}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1294084668
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294084667}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 357289400}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1294084669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294084667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Button
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1294084670
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294084667}
+  m_CullTransparentMesh: 1
 --- !u!1 &1303815614 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 52ba5c1970fb300469b36884dd361ddb, type: 3}
@@ -8241,18 +9378,6 @@ PolygonCollider2D:
       - {x: 0.8415528, y: -0.031182189}
       - {x: 0.8356474, y: 0.22152627}
       - {x: 0.99574596, y: 0.39096382}
---- !u!114 &1309085244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 944955038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1309085246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8271,6 +9396,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -8305,7 +9431,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1001 &1320695525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8760,6 +9885,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1362766747}
   - component: {fileID: 1362766748}
+  - component: {fileID: 1362766749}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -8775,8 +9901,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362766746}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 625, y: 217, z: 0}
-  m_LocalScale: {x: 113.64339, y: 113.64339, z: 94.7028}
+  m_LocalPosition: {x: 74.5, y: -42.500004, z: 0}
+  m_LocalScale: {x: 113.64339, y: 113.64339, z: 94.702805}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 169311847}
@@ -8810,8 +9936,8 @@ Transform:
   - {fileID: 1962283172}
   - {fileID: 1477858161}
   - {fileID: 1151691929}
-  m_Father: {fileID: 2102425013}
-  m_RootOrder: 0
+  m_Father: {fileID: 120317494}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1362766748
 SpriteRenderer:
@@ -8865,6 +9991,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1362766749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362766746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerQuestionPanel: {fileID: 1650017495}
+  botQuestionPanel: {fileID: 795851601}
+  actionPanel: {fileID: 1230816534}
+  gameManager: {fileID: 1353287639}
+  debugRegions: 0
+  botColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1365614272
 GameObject:
   m_ObjectHideFlags: 0
@@ -9239,18 +10383,6 @@ PolygonCollider2D:
       - {x: 0.41611433, y: -0.67346126}
       - {x: 0.63065034, y: -0.48819646}
       - {x: 0.41806984, y: -0.24251372}
---- !u!114 &1477858164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 980889360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1477858166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9269,6 +10401,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -9303,7 +10436,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1001 &1479908353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9426,18 +10558,6 @@ PolygonCollider2D:
       - {x: 0.7108131, y: -0.12971249}
       - {x: 0.97928673, y: 0.14687547}
       - {x: 0.91473794, y: 0.2388013}
---- !u!114 &1479908357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100818717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1479908359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9456,6 +10576,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -9490,7 +10611,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1001 &1537006166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9611,18 +10731,6 @@ PolygonCollider2D:
       - {x: 0.7059108, y: -0.5362647}
       - {x: 0.5154312, y: -0.33647996}
       - {x: 0.50784504, y: 0.040510863}
---- !u!114 &1537006170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330278467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1537006172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9641,6 +10749,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -9675,7 +10784,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1001 &1552961160
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9802,18 +10910,6 @@ PolygonCollider2D:
       - {x: 0.18388689, y: 0.09214765}
       - {x: 0.63940376, y: 0.53996754}
       - {x: 0.8735251, y: 0.5701655}
---- !u!114 &1552961164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1303815614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1552961166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9832,6 +10928,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -9866,7 +10963,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1 &1559763242
 GameObject:
   m_ObjectHideFlags: 0
@@ -10070,6 +11166,141 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564175162}
   m_CullTransparentMesh: 1
+--- !u!1 &1567685546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1567685547}
+  - component: {fileID: 1567685549}
+  - component: {fileID: 1567685548}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1567685547
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567685546}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 379429831}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1567685548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567685546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Button
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1567685549
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567685546}
+  m_CullTransparentMesh: 1
 --- !u!1 &1575259709 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 61de2149a0b828044a233e11a2f3fb52, type: 3}
@@ -10253,18 +11484,6 @@ PolygonCollider2D:
       - {x: 0.6476029, y: -0.23724481}
       - {x: 0.64966583, y: -0.09124356}
       - {x: 0.4630247, y: 0.07991637}
---- !u!114 &1601360133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1601360130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1601360135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10283,6 +11502,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -10317,7 +11537,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1001 &1605262348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10447,18 +11666,6 @@ PolygonCollider2D:
       - {x: 0.33328587, y: -0.19226384}
       - {x: 0.3136537, y: 0.0014460385}
       - {x: 0.43179727, y: 0.06115988}
---- !u!114 &1605262352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 813965011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1605262354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10477,6 +11684,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -10511,7 +11719,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1001 &1617436337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10701,18 +11908,6 @@ PolygonCollider2D:
       - {x: 0.010901779, y: -0.516224}
       - {x: 0.59331715, y: -0.52272105}
       - {x: 0.59904647, y: -0.14734066}
---- !u!114 &1630738371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096749263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1630738373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10731,6 +11926,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -10765,7 +11961,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1 &1650017490
 GameObject:
   m_ObjectHideFlags: 0
@@ -10778,9 +11973,10 @@ GameObject:
   - component: {fileID: 1650017494}
   - component: {fileID: 1650017493}
   - component: {fileID: 1650017492}
+  - component: {fileID: 1650017495}
   m_Layer: 5
-  m_Name: QustionPanel
-  m_TagString: QustionPanel
+  m_Name: QustionPanelPlayer
+  m_TagString: QuestionPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10808,10 +12004,10 @@ RectTransform:
   m_Father: {fileID: 120317494}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 106.20996, y: -39.20999}
-  m_SizeDelta: {x: -465.27002, y: 926.32}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.00012207031, y: 0}
+  m_SizeDelta: {x: -465.27002, y: -1871.6799}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1650017492
 MonoBehaviour:
@@ -10877,6 +12073,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650017490}
   m_CullTransparentMesh: 1
+--- !u!114 &1650017495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650017490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 551b0bfa067c35248b0fe56d2dc8902c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questionText: {fileID: 1045413845}
+  answerButtons:
+  - {fileID: 365593644}
+  - {fileID: 377046656}
+  - {fileID: 1650222427}
+  - {fileID: 1559763244}
+  answerTexts:
+  - {fileID: 347950411}
+  - {fileID: 181681993}
+  - {fileID: 2113922857}
+  - {fileID: 1972616821}
+  feedbackText: {fileID: 2115693314}
+  feedbackPanel: {fileID: 0}
+  questions:
+  - questionText: 
+    answers: []
+    correctAnswerIndex: 0
+    specificRegions: []
+  - questionText: 
+    answers: []
+    correctAnswerIndex: 0
+    specificRegions: []
+  - questionText: 
+    answers: []
+    correctAnswerIndex: 0
+    specificRegions: []
+  isBotPanel: 0
+  externalQuestionManager: {fileID: 309258263}
 --- !u!1 &1650222425
 GameObject:
   m_ObjectHideFlags: 0
@@ -11321,18 +12557,6 @@ PolygonCollider2D:
       - {x: 0.5466997, y: -0.18382096}
       - {x: 0.53716606, y: 0.010355841}
       - {x: 0.6721687, y: 0.043993115}
---- !u!114 &1708922174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1708922171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1708922176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11351,6 +12575,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -11385,7 +12610,141 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
+--- !u!1 &1724882337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1724882338}
+  - component: {fileID: 1724882340}
+  - component: {fileID: 1724882339}
+  m_Layer: 5
+  m_Name: FeedbackTextBot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1724882338
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724882337}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 795851597}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 303}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1724882339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724882337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1724882340
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724882337}
+  m_CullTransparentMesh: 1
 --- !u!1 &1731255483
 GameObject:
   m_ObjectHideFlags: 0
@@ -11520,6 +12879,128 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731255483}
+  m_CullTransparentMesh: 1
+--- !u!1 &1750549590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1750549591}
+  - component: {fileID: 1750549594}
+  - component: {fileID: 1750549593}
+  - component: {fileID: 1750549592}
+  m_Layer: 5
+  m_Name: Ans1Bot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1750549591
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750549590}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 330253943}
+  m_Father: {fileID: 795851597}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 62.6}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1750549592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750549590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1750549593}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1750549593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750549590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1750549594
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750549590}
   m_CullTransparentMesh: 1
 --- !u!1 &1764549951
 GameObject:
@@ -11943,18 +13424,6 @@ PolygonCollider2D:
       - {x: 0.50895286, y: -0.15100184}
       - {x: 0.42962852, y: -0.070341125}
       - {x: 0.46410742, y: 0.040771097}
---- !u!114 &1835854501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 341288820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1835854503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11973,6 +13442,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -12007,7 +13477,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1 &1845502091
 GameObject:
   m_ObjectHideFlags: 0
@@ -12794,6 +14263,141 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1944767669}
   m_CullTransparentMesh: 1
+--- !u!1 &1954503613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1954503614}
+  - component: {fileID: 1954503616}
+  - component: {fileID: 1954503615}
+  m_Layer: 5
+  m_Name: ScoreTextBot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1954503614
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954503613}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 795851597}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 301, y: 72.6}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1954503615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954503613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1954503616
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954503613}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1962283171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12916,18 +14520,6 @@ PolygonCollider2D:
       - {x: 0.4889373, y: -0.15644819}
       - {x: 0.58650905, y: -0.069697365}
       - {x: 0.58332527, y: 0.18953395}
---- !u!114 &1962283175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88278119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1962283177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12946,6 +14538,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -12980,7 +14573,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1 &1972616819
 GameObject:
   m_ObjectHideFlags: 0
@@ -13237,18 +14829,6 @@ PolygonCollider2D:
       - {x: 0.70320976, y: -0.66301227}
       - {x: 0.94569886, y: -0.42703825}
       - {x: 0.9590698, y: -0.2136111}
---- !u!114 &1993359379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1575259709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1993359381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13267,6 +14847,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -13301,7 +14882,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1 &1998517581
 GameObject:
   m_ObjectHideFlags: 0
@@ -13480,18 +15060,6 @@ PolygonCollider2D:
       - {x: -0.07070561, y: -0.31496772}
       - {x: 0.15168169, y: -0.3115147}
       - {x: 0.6405011, y: 0.16108887}
---- !u!114 &2023835255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023835252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2023835257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13510,6 +15078,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -13544,7 +15113,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1 &2047241425
 GameObject:
   m_ObjectHideFlags: 0
@@ -13705,18 +15273,6 @@ PolygonCollider2D:
       - {x: 0.23008946, y: -0.13484362}
       - {x: 0.19604175, y: -0.0270429}
       - {x: 0.33493587, y: 0.18386224}
---- !u!114 &2049199233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2049199230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2049199235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13735,6 +15291,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -13769,7 +15326,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1 &2058490770
 GameObject:
   m_ObjectHideFlags: 0
@@ -13916,18 +15472,6 @@ PolygonCollider2D:
       - {x: 0.9119448, y: 0.3439263}
       - {x: 0.88866353, y: 0.6328175}
       - {x: 0.6362645, y: 0.84742117}
---- !u!114 &2066610609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2066610606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2066610611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13946,6 +15490,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -13980,7 +15525,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1 &2075881660
 GameObject:
   m_ObjectHideFlags: 0
@@ -14362,18 +15906,6 @@ PolygonCollider2D:
       - {x: -0.10527694, y: -0.3073439}
       - {x: 0.07431182, y: -0.18613361}
       - {x: 0.1223208, y: -0.11380333}
---- !u!114 &2089956245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850747421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283142a31698f024cb450d01914a00cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2089956247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14392,6 +15924,7 @@ MonoBehaviour:
   botInfluence: 0
   playerInfluenceText: {fileID: 925177523}
   botInfluenceText: {fileID: 1657582421}
+  isCity: 0
   politicalCampaigns:
   - name: "\u0420\u0435\u0447 \u043D\u0430 \u043F\u043B\u043E\u0449\u0430\u0434\u0430"
     baseCost: 200
@@ -14426,7 +15959,6 @@ MonoBehaviour:
       \u043F\u0440\u043E\u0435\u043A\u0442\u0438"
     baseCost: 1500
     baseInfluence: 60
-  isCity: 0
 --- !u!1 &2093952469
 GameObject:
   m_ObjectHideFlags: 0
@@ -14562,38 +16094,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093952469}
   m_CullTransparentMesh: 1
---- !u!1 &2102425012
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2102425013}
-  m_Layer: 0
-  m_Name: Map
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2102425013
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2102425012}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -550.5, y: -259.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1362766747}
-  m_Father: {fileID: 120317494}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2113922855
 GameObject:
   m_ObjectHideFlags: 0

@@ -500,4 +500,10 @@ public class GameManager : MonoBehaviour
     {
         return isGameOver;
     }
+    public void GameOver()
+    {
+        // Примерна имплементация:
+        Debug.Log("Game Over!");
+        // Тук можете да добавите логика за край на играта
+    }
 }

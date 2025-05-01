@@ -1,162 +1,571 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class RegionInteraction : MonoBehaviour
 {
-    private RegionData regionData;
-    private ActionPanel actionPanelScript;
-
-    void Awake()
+    public enum TurnState
     {
-        // Намираме RegionData компонента
-        regionData = GetComponent<RegionData>();
-        if (regionData == null)
-        {
-            Debug.LogError("RegionData component not found on this object.", this);
-        }
+        PlayerSelection,
+        PlayerQuestion,
+        PlayerAction,
+        BotSelection,
+        BotQuestion,
+        BotAction
+    }
+
+    // Референции към UI елементи
+    public QuestionPanel playerQuestionPanel;
+    public QuestionPanel botQuestionPanel;
+    public ActionPanel actionPanel;
+    public GameManager gameManager;
+
+    // Настройки
+    public bool debugRegions = false;
+    public Color botColor = Color.red;
+
+    private TurnState currentState;
+    private RegionData selectedRegion;
+    private Dictionary<string, bool> selectedRegions = new Dictionary<string, bool>();
+
+    #region Инициализация
+    public static RegionInteraction Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
     }
 
     void Start()
     {
-        // Намираме ActionPanel в сцената само веднъж
-        actionPanelScript = FindObjectOfType<ActionPanel>();
-        if (actionPanelScript == null)
+        // Проверка за налични панели
+        if (playerQuestionPanel == null)
         {
-            Debug.LogError("ActionPanel not found in the scene. Make sure it exists!", this);
+            Debug.LogError("Player Question Panel is not assigned in RegionInteraction!");
+        }
+
+        if (botQuestionPanel == null)
+        {
+            Debug.LogError("Bot Question Panel is not assigned in RegionInteraction!");
+        }
+
+        if (actionPanel == null)
+        {
+            Debug.LogError("Action Panel is not assigned in RegionInteraction!");
+        }
+
+        InitializeGame();
+    }
+
+    void InitializeGame()
+    {
+        selectedRegions.Clear();
+        HideAllPanels();
+        SetTurnState(TurnState.PlayerSelection);
+    }
+    #endregion
+
+    #region Управление на панели
+    void HideAllPanels()
+    {
+        if (playerQuestionPanel != null) playerQuestionPanel.HidePanel();
+        if (botQuestionPanel != null) botQuestionPanel.HidePanel();
+        if (actionPanel != null) actionPanel.HidePanel();
+    }
+    #endregion
+
+    #region Логика на играча
+    void Update()
+    {
+        if (currentState == TurnState.PlayerSelection && Input.GetMouseButtonDown(0) && !IsPointerOverUI())
+        {
+            HandlePlayerSelection();
         }
     }
 
-
-    private void OnMouseDown()
+    public void ResetAllPanels()
     {
-        // Проверка дали е ред на играча
-        if (GameManager.Instance != null && !GameManager.Instance.isPlayerTurn)
+        if (playerQuestionPanel != null) playerQuestionPanel.HidePanel();
+        if (botQuestionPanel != null) botQuestionPanel.HidePanel();
+        if (actionPanel != null) actionPanel.gameObject.SetActive(false);
+    }
+
+    public RegionData GetSelectedRegion() => selectedRegion;
+
+    void HandlePlayerSelection()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+        if (hit.collider == null) return;
+
+        RegionData region = hit.collider.GetComponent<RegionData>();
+        if (region == null || selectedRegions.ContainsKey(region.regionName)) return;
+
+        Debug.Log($"Selected region: {region.regionName}");
+        selectedRegion = region;
+        selectedRegions[region.regionName] = true;
+        MarkRegionAsSelected(region, PlayerDataManager.Instance.playerColor);
+
+        SetTurnState(TurnState.PlayerQuestion);
+      
+        //тук мое
+      //  selectedRegion = null;
+
+    }
+
+    // Извиква се при верен отговор
+    public void OnQuestionAnsweredCorrectly()
+    {
+        Debug.Log("Question answered correctly! Moving to action panel.");
+        SetTurnState(TurnState.PlayerAction);
+     
+            //
+      //selectedRegion = null;
+
+
+    }
+
+    // Извиква се при грешен отговор
+    public void OnQuestionAnsweredIncorrectly()
+    {
+        Debug.Log("Question answered incorrectly! Moving to bot selection.");
+        selectedRegion = null;
+        SetTurnState(TurnState.BotSelection);
+
+        //тук
+        selectedRegion = null;
+
+    }
+    #endregion
+
+    #region Логика на бота
+    void BotSelectRegion()
+    {
+        RegionData[] availableRegions = GetAvailableRegions();
+        if (availableRegions.Length == 0)
         {
-            Debug.Log("Not player's turn - skipping interaction");
+            gameManager.GameOver();
             return;
         }
 
-        // Проверка дали имаме нужните компоненти
-        if (regionData == null)
-        {
-            Debug.LogError("RegionData is missing, cannot proceed with interaction", this);
-            return;
-        }
+        selectedRegion = availableRegions[Random.Range(0, availableRegions.Length)];
+        selectedRegions[selectedRegion.regionName] = true;
+        MarkRegionAsSelected(selectedRegion, botColor);
 
-        // Оцветяване на региона с цвета на играча
-        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        if (spriteRenderer != null && PlayerDataManager.Instance != null)
-        {
-            spriteRenderer.color = PlayerDataManager.Instance.playerColor;
-        }
+        SetTurnState(TurnState.BotQuestion);
 
-        // Проверка дали actionPanelScript е намерен
-        if (actionPanelScript == null)
-        {
-            // Опитваме се да го намерим отново, в случай че е бил унищожен или деактивиран
-            actionPanelScript = FindObjectOfType<ActionPanel>(true);
+//тук
+      //  selectedRegion = null;
 
-            if (actionPanelScript == null)
+    }
+
+    RegionData[] GetAvailableRegions()
+    {
+        List<RegionData> available = new List<RegionData>();
+        foreach (RegionData region in FindObjectsOfType<RegionData>())
+        {
+            if (!selectedRegions.ContainsKey(region.regionName))
             {
-                Debug.LogError("ActionPanel not found in the scene!", this);
-                return;
+                available.Add(region);
             }
         }
+        return available.ToArray();
+    }
 
-        // Показване на панела и задаване на избрания регион
-        actionPanelScript.ShowForRegion(regionData);
+    IEnumerator BotTurnDelay()
+    {
+        yield return new WaitForSeconds(1f);
+        BotSelectRegion();
+    }
+
+    IEnumerator SimulateBotAction()
+    {
+        yield return new WaitForSeconds(2f);
+        if (selectedRegion != null)
+        {
+            float influence = Random.Range(5f, 15f);
+            selectedRegion.UpdateBotInfluence(influence);
+        }
+        SetTurnState(TurnState.PlayerSelection);
+
+        //тук
+       // selectedRegion = null;
+
+    }
+    #endregion
+
+    #region Управление на състоянията
+    void SetTurnState(TurnState newState)
+    {
+        Debug.Log("[SetTurnState] -> " + newState);
+        currentState = newState;
+        if (debugRegions) Debug.Log($"Ново състояние: {newState}");
+
+        HideAllPanels();
+
+        switch (newState)
+        {
+            case TurnState.PlayerSelection:
+                EnableRegionColliders(true);
+                break;
+
+            case TurnState.PlayerQuestion:
+                if (playerQuestionPanel == null)
+                {
+                    Debug.LogWarning("Player Question Panel is null! Прескачаме въпроса.");
+
+                    SetTurnState(TurnState.PlayerAction);
+                 
+
+                    return;
+                }
+
+                Debug.Log("Setting up question panel with region: " +
+                          (selectedRegion != null ? selectedRegion.regionName : "null"));
+
+                // ВАЖНО: вместо директно да показваме панела, чакаме кадър
+                StartCoroutine(ShowQuestionPanelDelayed());
+                EnableRegionColliders(false);
+                break;
+
+            case TurnState.PlayerAction:
+                /*  
+                   if (actionPanel == null)
+                   {
+                       Debug.LogError("Action Panel is null! Cannot show panel.");
+                       SetTurnState(TurnState.BotSelection);
+
+                       //тук
+                          selectedRegion = null;
+
+                       return;
+                   }
+
+                   Debug.Log("Showing action panel for region: " +
+                             (selectedRegion != null ? selectedRegion.regionName : "null"));
+                */
+                //actionPanel.gameObject.SetActive(true);
+
+                Debug.Log("ТУК");
+
+             actionPanel.ShowForRegion(selectedRegion);
+                break;
+
+            case TurnState.BotSelection:
+                StartCoroutine(BotTurnDelay());
+                break;
+
+            case TurnState.BotQuestion:
+                if (botQuestionPanel == null)
+                {
+                    Debug.LogError("Bot Question Panel is null! Cannot show panel.");
+                    SetTurnState(TurnState.BotAction);
+
+                    //тук
+                    selectedRegion = null;
+
+                    return;
+                }
+
+                botQuestionPanel.SetupQuestion(selectedRegion);
+                botQuestionPanel.ShowPanel();
+                StartCoroutine(botQuestionPanel.SimulateBotAnswer());
+                break;
+
+            case TurnState.BotAction:
+                StartCoroutine(SimulateBotAction());
+                break;
+        }
+    }
+    #endregion
+    private IEnumerator ShowQuestionPanelDelayed()
+    {
+        yield return new WaitForEndOfFrame();
+
+        Debug.Log("Now calling ShowPanel()");
+        playerQuestionPanel.SetupQuestion(selectedRegion);
+        playerQuestionPanel.ShowPanel();
+    }
+
+    public void OnBotQuestionAnsweredIncorrectly()
+    {
+       // selectedRegion = null;
+        SetTurnState(TurnState.PlayerSelection);
+
+        //тук
+        selectedRegion = null;
+
+    }
+    public void OnBotQuestionAnsweredCorrectly()
+    {
+        SetTurnState(TurnState.BotAction);
+    }
+
+    #region Помощни функции
+    void MarkRegionAsSelected(RegionData region, Color color)
+    {
+        region.SetMarkerColor(color);
+
+    }
+
+    void EnableRegionColliders(bool enable)
+    {
+        foreach (RegionData region in FindObjectsOfType<RegionData>())
+        {
+            Collider2D col = region.GetComponent<Collider2D>();
+            if (col != null) col.enabled = enable;
+        }
+    }
+
+    bool IsPointerOverUI()
+    {
+        PointerEventData eventData = new PointerEventData(UnityEngine.EventSystems.EventSystem.current);
+        eventData.position = Input.mousePosition;
+        List<RaycastResult> results = new List<RaycastResult>();
+        UnityEngine.EventSystems.EventSystem.current.RaycastAll(eventData, results);
+        return results.Count > 0;
+    }
+    #endregion
+
+    public void OnActionsComplete()
+    {
+        // Можете да добавите допълнителна логика тук ако е необходимо
+        SetTurnState(TurnState.BotSelection);
+
+        //тук
+        selectedRegion = null;
+
     }
 }
-
-
-/*using UnityEngine;
+/*
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class RegionInteraction : MonoBehaviour
 {
-    public GameObject actionPanel; 
-    private RegionData regionData;
-    void OnMouseEnter() => Debug.Log($"Мишката е върху {name}");
-    void OnMouseExit() => Debug.Log($"Мишката напусна {name}");
+    public enum TurnState
+    {
+        PlayerSelection,
+        PlayerQuestion,
+        PlayerAction,
+        BotSelection,
+        BotQuestion,
+        BotAction
+    }
+
+    // Референции към UI елементи
+    public QuestionPanel playerQuestionPanel;
+    public QuestionPanel botQuestionPanel;
+    public ActionPanel actionPanel;
+    public GameManager gameManager;
+
+    // Настройки
+    public bool debugRegions = false;
+    public Color botColor = Color.red;
+
+    private TurnState currentState;
+    private RegionData selectedRegion;
+    private Dictionary<string, bool> selectedRegions = new Dictionary<string, bool>();
+
+    #region Инициализация
+    public static RegionInteraction Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
+    }
+
     void Start()
     {
-        regionData = GetComponent<RegionData>();
-        if (regionData == null)
-        {
-            Debug.LogError("RegionData component not found on this object.", this);
-        }
-
-        // Скрит панел
-        if (actionPanel != null)
-        {
-            actionPanel.SetActive(false);
-        }
-        else
-        {
-            Debug.LogError("ActionPanel reference is not assigned.", this);
-        }
+        InitializeGame();
     }
-    private void OnMouseDown()
+
+    void InitializeGame()
     {
-        if (!GameManager.Instance.isPlayerTurn) return;
-
-        // 1. Оцветяване на региона
-          GetComponent<SpriteRenderer>().color = PlayerDataManager.Instance.playerColor;
-      //  ShowActionPanel();
-
-       // Debug.Log("Регион избран: " + name);
-        // GetComponent<SpriteRenderer>().color = Color.magenta; // Ярък тестов цвят
-
-        // 2. Показване на панела
-         ActionPanel panel = FindObjectOfType<ActionPanel>(true); // Намира дори скрити панели
-        
-          panel.ShowForRegion(GetComponent<RegionData>());
-
-        // Debug.Log($"Избран регион: {name}"); // За тестване
+        selectedRegions.Clear();
+        HideAllPanels();
+        SetTurnState(TurnState.PlayerSelection);
     }
-  /*  private void ShowActionPanel()
+    #endregion
+
+    #region Управление на панели
+    void HideAllPanels()
     {
-        // Намери и покажи панела
-        Transform actionPanel = transform.Find("ActionPanel");
-        if (actionPanel != null)
+        playerQuestionPanel?.HidePanel();
+        botQuestionPanel?.HidePanel();
+        actionPanel?.HidePanel();
+    }
+    #endregion
+
+    #region Логика на играча
+    void Update()
+    {
+        if (currentState == TurnState.PlayerSelection && Input.GetMouseButtonDown(0) && !IsPointerOverUI())
         {
-            actionPanel.gameObject.SetActive(true);
-            Debug.Log("Action Panel активиран");
-        }
-        else
-        {
-            Debug.LogError("Action Panel не е намерен!");
+            HandlePlayerSelection();
         }
     }
-  */
-/*   void OnMouseDown()
-   {
-       GameManager gameManager = FindObjectOfType<GameManager>();
 
-       // Проверка дали играта е свършила
-       if (gameManager != null && gameManager.IsGameOver())
-       {
-           Debug.Log("Game is over. Interactions are disabled.");
-           return;
-       }
+    public void ResetAllPanels()
+    {
+        if (playerQuestionPanel != null) playerQuestionPanel?.HidePanel();
+        if (botQuestionPanel != null) botQuestionPanel?.HidePanel();
+        if (actionPanel != null) actionPanel.gameObject.SetActive(false);
+    }
 
-       if (actionPanel != null && regionData != null)
-       {
-           ActionPanel panelScript = actionPanel.GetComponent<ActionPanel>();
-           if (panelScript != null)
-           {
-               // Подаване на инфо за регион в панела и показване на панела
-               panelScript.SetRegion(regionData);
-               actionPanel.SetActive(true);
-           }
-           else
-           {
-               Debug.LogError("ActionPanel script not found on the actionPanel object.", this);
-           }
-       }
-       else
-       {
-           Debug.LogError("ActionPanel or RegionData is not assigned.", this);
-       }
-   }
+    public RegionData GetSelectedRegion() => selectedRegion;
 
+    void HandlePlayerSelection()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+        if (hit.collider == null) return;
+
+        RegionData region = hit.collider.GetComponent<RegionData>();
+        if (region == null || selectedRegions.ContainsKey(region.regionName)) return;
+
+        selectedRegion = region;
+        selectedRegions[region.regionName] = true;
+        MarkRegionAsSelected(region, PlayerDataManager.Instance.playerColor);
+
+        SetTurnState(TurnState.PlayerQuestion);
+    }
+
+    // Извиква се при верен отговор
+    public void OnQuestionAnsweredCorrectly()
+    {
+        SetTurnState(TurnState.PlayerAction);
+    }
+
+    // Извиква се при грешен отговор
+    public void OnQuestionAnsweredIncorrectly()
+    {
+        SetTurnState(TurnState.BotSelection);
+    }
+    #endregion
+
+    #region Логика на бота
+    void BotSelectRegion()
+    {
+        RegionData[] availableRegions = GetAvailableRegions();
+        if (availableRegions.Length == 0)
+        {
+            gameManager.GameOver();
+            return;
+        }
+
+        selectedRegion = availableRegions[Random.Range(0, availableRegions.Length)];
+        selectedRegions[selectedRegion.regionName] = true;
+        MarkRegionAsSelected(selectedRegion, botColor);
+
+        SetTurnState(TurnState.BotQuestion);
+    }
+
+    RegionData[] GetAvailableRegions()
+    {
+        List<RegionData> available = new List<RegionData>();
+        foreach (RegionData region in FindObjectsOfType<RegionData>())
+        {
+            if (!selectedRegions.ContainsKey(region.regionName))
+            {
+                available.Add(region);
+            }
+        }
+        return available.ToArray();
+    }
+
+    IEnumerator BotTurnDelay()
+    {
+        yield return new WaitForSeconds(1f);
+        BotSelectRegion();
+    }
+
+    IEnumerator SimulateBotAction()
+    {
+        yield return new WaitForSeconds(2f);
+        if (selectedRegion != null)
+        {
+            float influence = Random.Range(5f, 15f);
+            selectedRegion.UpdateBotInfluence(influence);
+        }
+        SetTurnState(TurnState.PlayerSelection);
+    }
+    #endregion
+
+    #region Управление на състоянията
+    void SetTurnState(TurnState newState)
+    {
+        currentState = newState;
+        if (debugRegions) Debug.Log($"Ново състояние: {newState}");
+
+        HideAllPanels();
+
+        switch (newState)
+        {
+            case TurnState.PlayerSelection:
+                EnableRegionColliders(true);
+                break;
+
+            case TurnState.PlayerQuestion:
+                playerQuestionPanel.SetupQuestion(selectedRegion);
+                playerQuestionPanel.ShowPanel();
+                EnableRegionColliders(false);
+                break;
+
+            case TurnState.PlayerAction:
+                actionPanel.ShowForRegion(selectedRegion);
+                break;
+
+            case TurnState.BotSelection:
+                StartCoroutine(BotTurnDelay());
+                break;
+
+            case TurnState.BotQuestion:
+                botQuestionPanel.SetupQuestion(selectedRegion);
+                botQuestionPanel.ShowPanel();
+                StartCoroutine(botQuestionPanel.SimulateBotAnswer());
+                break;
+
+            case TurnState.BotAction:
+                StartCoroutine(SimulateBotAction());
+                break;
+        }
+    }
+    #endregion
+
+    #region Помощни функции
+    void MarkRegionAsSelected(RegionData region, Color color)
+    {
+        region.SetMarkerColor(color);
+    }
+
+    void EnableRegionColliders(bool enable)
+    {
+        foreach (RegionData region in FindObjectsOfType<RegionData>())
+        {
+            Collider2D col = region.GetComponent<Collider2D>();
+            if (col != null) col.enabled = enable;
+        }
+    }
+
+    bool IsPointerOverUI()
+    {
+        PointerEventData eventData = new PointerEventData(UnityEngine.EventSystems.EventSystem.current);
+        eventData.position = Input.mousePosition;
+        List<RaycastResult> results = new List<RaycastResult>();
+        UnityEngine.EventSystems.EventSystem.current.RaycastAll(eventData, results);
+        return results.Count > 0;
+    }
+    #endregion
+    public void OnActionsComplete()
+    {
+        // Можете да добавите допълнителна логика тук ако е необходимо
+        SetTurnState(TurnState.BotSelection);
+    }
 }
 */
