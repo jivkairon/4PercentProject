@@ -40,19 +40,16 @@ public class QuestionPanel : MonoBehaviour
 
     [SerializeField] private bool isBotPanel = false;
 
-
     private Color correctColor = new Color(0.2f, 0.8f, 0.2f, 0.8f); // Зелен
     private Color incorrectColor = new Color(0.8f, 0.2f, 0.2f, 0.8f); // Червен
 
     public QuestionManager externalQuestionManager;
+
     void Awake()
     {
         // При Awake трябва да се убедим, че панелът е неактивен
-      //  gameObject.SetActive(false);
         HidePanel();
     }
-
-
 
     private void ImportQuestionsFromManager()
     {
@@ -100,8 +97,6 @@ public class QuestionPanel : MonoBehaviour
 
     void Start()
     {
-      
-
         regionInteraction = FindObjectOfType<RegionInteraction>();
         if (regionInteraction == null)
         {
@@ -152,17 +147,12 @@ public class QuestionPanel : MonoBehaviour
         isActive = true;
         transform.SetAsLastSibling();
         gameObject.SetActive(true);
-        /*   Debug.Log("Showing question panel");
-           // Задаваме панела последен в йерархията, за да е най-отгоре
-             transform.SetAsLastSibling();
-           Debug.Log("=> Showing playerQuestionPanel");
-           gameObject.SetActive(true);
-        */
     }
 
     public void HidePanel()
     {
         Debug.Log("Hiding question panel");
+        isActive = false;
         gameObject.SetActive(false);
     }
 
@@ -267,8 +257,8 @@ public class QuestionPanel : MonoBehaviour
             else
             {
                 Debug.Log("Answer was correct!");
-                if (regionInteraction != null) regionInteraction.OnQuestionAnsweredCorrectly();
                 if (currentRegion != null) currentRegion.UpdatePlayerInfluence(5f);
+                if (regionInteraction != null) regionInteraction.OnQuestionAnsweredCorrectly();
             }
         }
         else
@@ -284,7 +274,6 @@ public class QuestionPanel : MonoBehaviour
 
         HidePanel();
     }
-
     void ShowFeedback(bool isCorrect)
     {
         if (feedbackPanel == null || feedbackText == null) return;

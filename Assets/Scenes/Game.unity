@@ -4670,8 +4670,28 @@ MonoBehaviour:
     answers: []
     correctAnswerIndex: 0
     specificRegions: []
-  isBotPanel: 0
-  externalQuestionManager: {fileID: 0}
+  - questionText: 
+    answers: []
+    correctAnswerIndex: 0
+    specificRegions: []
+  - questionText: 
+    answers: []
+    correctAnswerIndex: 0
+    specificRegions: []
+  - questionText: 
+    answers: []
+    correctAnswerIndex: 0
+    specificRegions: []
+  - questionText: 
+    answers: []
+    correctAnswerIndex: 0
+    specificRegions: []
+  - questionText: 
+    answers: []
+    correctAnswerIndex: 0
+    specificRegions: []
+  isBotPanel: 1
+  externalQuestionManager: {fileID: 309258263}
 --- !u!1 &802189111 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 63181d72561d7ae45af79cd270110f85, type: 3}
@@ -12099,6 +12119,26 @@ MonoBehaviour:
   feedbackText: {fileID: 2115693314}
   feedbackPanel: {fileID: 0}
   questions:
+  - questionText: 
+    answers: []
+    correctAnswerIndex: 0
+    specificRegions: []
+  - questionText: 
+    answers: []
+    correctAnswerIndex: 0
+    specificRegions: []
+  - questionText: 
+    answers: []
+    correctAnswerIndex: 0
+    specificRegions: []
+  - questionText: 
+    answers: []
+    correctAnswerIndex: 0
+    specificRegions: []
+  - questionText: 
+    answers: []
+    correctAnswerIndex: 0
+    specificRegions: []
   - questionText: 
     answers: []
     correctAnswerIndex: 0
