@@ -14,7 +14,7 @@ public class QuizGame : MonoBehaviour
     [SerializeField] private Button[] answerButtons;
     [SerializeField] private TextMeshProUGUI[] buttonTexts;
     [SerializeField] private TextMeshProUGUI feedbackText;
-    [SerializeField] private Button nextButton;
+  //  [SerializeField] private Button nextButton;
     [SerializeField] private TextMeshProUGUI scoreText;
 
     private QuestionManager questionManager;
@@ -39,22 +39,22 @@ public class QuizGame : MonoBehaviour
             answerButtons[i].onClick.AddListener(() => OnAnswerSelected(buttonIndex));
         }
 
-        nextButton.onClick.AddListener(LoadNextQuestion);
-        nextButton.gameObject.SetActive(false);
+     //   nextButton.onClick.AddListener(LoadNextQuestion);
+      //  nextButton.gameObject.SetActive(false);
         feedbackText.text = "";
 
         // Зареждаме първия въпрос
         LoadNextQuestion();
 
         // Обновяваме резултата
-        UpdateScore();
+     //   UpdateScore();
     }
 
     void LoadNextQuestion()
     {
         // Скриваме обратната връзка и бутона за следващ въпрос
-        feedbackText.text = "";
-        nextButton.gameObject.SetActive(false);
+       feedbackText.text = "";
+        //nextButton.gameObject.SetActive(false);
 
         // Зареждаме случаен въпрос
         // За да заредите въпрос от конкретна категория, използвайте:
@@ -122,19 +122,32 @@ public class QuizGame : MonoBehaviour
         }
 
         // Добавяме допълнителна обратна връзка, ако има такава
-        if (!string.IsNullOrEmpty(currentQuestion.answers[buttonIndex].feedback))
+    /*    if (!string.IsNullOrEmpty(currentQuestion.answers[buttonIndex].feedback))
         {
             feedbackText.text += "\n" + currentQuestion.answers[buttonIndex].feedback;
         }
-
+    */
         // Увеличаваме брояча на въпросите
         questionCount++;
 
         // Обновяваме резултата
-        UpdateScore();
+     //   UpdateScore();
 
         // Показваме бутона за следващ въпрос
-        nextButton.gameObject.SetActive(true);
+        //   nextButton.gameObject.SetActive(true);
+
+     //   feedbackText.text = "";
+        StartCoroutine(LoadNextQuestionAfterDelay(2f)); // 2 секунди пауза
+
+
+    }
+    IEnumerator LoadNextQuestionAfterDelay(float delay)
+    {
+       
+
+        yield return new WaitForSeconds(delay); // Малка пауза за плавен преход
+        
+        LoadNextQuestion();
     }
 
     void UpdateScore()

@@ -257,8 +257,11 @@ public class QuestionPanel : MonoBehaviour
             else
             {
                 Debug.Log("Answer was correct!");
-                if (currentRegion != null) currentRegion.UpdatePlayerInfluence(5f);
-                if (regionInteraction != null) regionInteraction.OnQuestionAnsweredCorrectly();
+             //Тук
+                   if (currentRegion != null) currentRegion.UpdatePlayerInfluence(5f);
+              //  if (regionInteraction != null) 
+           
+regionInteraction.OnQuestionAnsweredCorrectly();
             }
         }
         else
@@ -268,7 +271,10 @@ public class QuestionPanel : MonoBehaviour
             else
             {
                 Debug.Log("Answer was incorrect!");
-                if (regionInteraction != null) regionInteraction.OnQuestionAnsweredIncorrectly();
+            //
+            //if (regionInteraction != null)
+
+           regionInteraction.OnQuestionAnsweredIncorrectly();
             }
         }
 

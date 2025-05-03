@@ -50,7 +50,13 @@ public class RegionData : MonoBehaviour
         if (mandates <= 0) return action.baseCost;
         return action.baseCost * (mandates / 240f);
     }
-
+    public void ResetMarkerColor()
+    {
+        if (TryGetComponent<SpriteRenderer>(out var renderer))
+        {
+            renderer.color = Color.white;  // Или началния цвят на региона
+        }
+    }
     // Влияние на действие
     public float GetActionInfluence(ActionData action)
     {

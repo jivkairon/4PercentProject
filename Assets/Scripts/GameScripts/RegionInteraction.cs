@@ -141,9 +141,11 @@ public class RegionInteraction : MonoBehaviour
     public void OnQuestionAnsweredIncorrectly()
     {
         Debug.Log("[RegionInteraction] Question answered incorrectly! Moving to bot selection.");
-        // НЕ нулираме selectedRegion тук, защото може да ни трябва информация за избрания регион
-
-        selectedRegion = null; // Нулираме избрания регион
+        if (selectedRegion != null)
+        {
+            selectedRegion.ResetMarkerColor();  // Добавете този метод в RegionData
+            selectedRegion = null;              // Нулира избрания регион
+        }
         SetTurnState(TurnState.BotSelection);
     }
     #endregion
@@ -192,6 +194,16 @@ public class RegionInteraction : MonoBehaviour
     IEnumerator SimulateBotAction()
     {
         Debug.Log("[RegionInteraction] Simulating bot action");
+
+        // Добавете проверка за null
+        if (selectedRegion == null)
+        {
+            Debug.LogError("Cannot perform bot action - no region selected!");
+            SetTurnState(TurnState.PlayerSelection);
+            yield break;
+        }
+
+    
         yield return new WaitForSeconds(2f);
 
         if (selectedRegion != null)
@@ -201,10 +213,10 @@ public class RegionInteraction : MonoBehaviour
             Debug.Log($"[RegionInteraction] Bot applied {influence} influence to {selectedRegion.regionName}");
         }
 
-        // Явно освобождаем выбранный регион
+        
         selectedRegion = null;
 
-        // Разрешаем новый выбор региона
+       
         isProcessingAction = false;
 
         Debug.Log("[RegionInteraction] Bot action completed, passing turn to player");
@@ -257,6 +269,9 @@ public class RegionInteraction : MonoBehaviour
                 selectedRegion = null; // Явно нулираме избрания регион
                 EnableRegionColliders(true);
                 isProcessingAction = false;
+
+                //ТУК
+                actionPanel.HidePanel();
                 break;
             case TurnState.PlayerQuestion:
                 if (playerQuestionPanel == null)
@@ -287,6 +302,9 @@ public class RegionInteraction : MonoBehaviour
             case TurnState.BotSelection:
                 Debug.Log("[RegionInteraction] Bot's turn to select a region");
                 // НЕ нулираме selectedRegion тук, ще го направим в PlayerSelection
+
+                //тук
+                actionPanel.HidePanel();
                 StartCoroutine(BotTurnDelay());
                 break;
 
@@ -306,7 +324,17 @@ public class RegionInteraction : MonoBehaviour
 
             case TurnState.BotAction:
                 Debug.Log("[RegionInteraction] Bot is taking action");
-                StartCoroutine(SimulateBotAction());
+
+                // Уверете се, че регионът все още е избран
+                if (selectedRegion != null)
+                {
+                    StartCoroutine(SimulateBotAction());
+                }
+                else
+                {
+                    Debug.LogError("No region selected for bot action!");
+                    SetTurnState(TurnState.PlayerSelection);
+                }
                 break;
         }
     }
@@ -332,6 +360,14 @@ public class RegionInteraction : MonoBehaviour
     public void OnBotQuestionAnsweredCorrectly()
     {
         Debug.Log("[RegionInteraction] Bot answered correctly, moving to bot action");
+
+        // Уверете се, че selectedRegion не е null
+        if (selectedRegion == null)
+        {
+            Debug.LogError("Selected region is null when bot answered correctly!");
+            return;
+        }
+
         SetTurnState(TurnState.BotAction);
     }
 
